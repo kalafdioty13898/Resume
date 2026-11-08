@@ -1,0 +1,4093 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>موتورلند | فروشگاه تخصصی موتورسیکلت</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --red: #c8102e;
+        --red-d: #9c0b23;
+        --red-t: #fbedef;
+        --ink: #191a1f;
+        --mut: #71747c;
+        --line: #e9e5de;
+        --paper: #f7f5f1;
+        --card: #fff;
+        --soft: #f1ede6;
+        --ok: #1e7a46;
+        --sh: 0 14px 34px -18px rgba(25, 26, 31, 0.28);
+        --grad: linear-gradient(135deg, #c8102e 0%, #9c0b23 100%);
+        --grad-soft: linear-gradient(135deg, #fbedef 0%, #fff 100%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Vazirmatn, Tahoma, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+      button {
+        font: inherit;
+        cursor: pointer;
+        border: none;
+        background: none;
+        color: inherit;
+      }
+      input,
+      select {
+        font: inherit;
+      }
+      svg {
+        display: block;
+      }
+      ::selection {
+        background: var(--red);
+        color: #fff;
+      }
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d8d3ca;
+        border-radius: 8px;
+      }
+      #amazing,
+      #products {
+        scroll-margin-top: 120px;
+      }
+
+      .topbar {
+        background: var(--grad);
+        color: #fff;
+        text-align: center;
+        padding: 8px 12px;
+        font-size: 12.5px;
+        font-weight: 500;
+      }
+
+      .hdr {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+      .hdr-in {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 13px 24px;
+        max-width: 1280px;
+        margin: auto;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        text-decoration: none;
+        color: inherit;
+        flex-shrink: 0;
+      }
+      .logo-mark {
+        width: 42px;
+        height: 42px;
+        background: var(--grad);
+        color: #fff;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+      }
+      .logo b {
+        font-size: 20px;
+        font-weight: 800;
+        display: block;
+        line-height: 1.3;
+      }
+      .logo small {
+        display: block;
+        color: var(--mut);
+        font-size: 10.5px;
+        margin-top: -4px;
+      }
+      .search {
+        flex: 1;
+        max-width: 540px;
+        display: flex;
+        background: var(--paper);
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.2s;
+      }
+      .search:focus-within {
+        border-color: var(--red);
+        background: #fff;
+        box-shadow: 0 0 0 4px var(--red-t);
+      }
+      .search input {
+        flex: 1;
+        border: none;
+        background: none;
+        outline: none;
+        padding: 11px 14px;
+        font-size: 13.5px;
+        min-width: 0;
+      }
+      .search button {
+        padding: 0 16px;
+        color: var(--mut);
+      }
+      .search button:hover {
+        color: var(--red);
+      }
+      .hact {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-inline-start: auto;
+      }
+      .icon-btn {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        transition: 0.15s;
+      }
+      .icon-btn:hover {
+        border-color: var(--red);
+        color: var(--red);
+        background: var(--red-t);
+      }
+      .badge-n {
+        position: absolute;
+        top: -7px;
+        inset-inline-start: -7px;
+        min-width: 20px;
+        height: 20px;
+        padding: 0 5px;
+        background: var(--red);
+        color: #fff;
+        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+        border: 2px solid #fff;
+      }
+      .btn-login {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--ink);
+        color: #fff;
+        border-radius: 12px;
+        padding: 10px 18px;
+        font-weight: 600;
+        font-size: 13.5px;
+        transition: 0.15s;
+      }
+      .btn-login:hover {
+        background: var(--red);
+        transform: translateY(-1px);
+      }
+      .btn-menu {
+        display: none;
+      }
+      @keyframes bump {
+        30% {
+          transform: scale(1.15);
+        }
+      }
+      #cartBtn.bump {
+        animation: bump 0.4s;
+      }
+
+      .nav {
+        border-top: 1px solid var(--line);
+        position: relative;
+      }
+      .nav-in {
+        display: flex;
+        gap: 2px;
+        padding: 0 24px;
+        max-width: 1280px;
+        margin: auto;
+      }
+      .nav-item {
+        position: relative;
+      }
+      .nav-item > a {
+        padding: 11px 16px;
+        font-size: 13.5px;
+        color: var(--mut);
+        font-weight: 600;
+        white-space: nowrap;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: 0.15s;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+      }
+      .nav-item > a:hover,
+      .nav-item:hover > a {
+        color: var(--red);
+        border-color: var(--red);
+      }
+      .nav-item > a.hot {
+        color: var(--red);
+        font-weight: 700;
+      }
+      .nav-item > a .chev {
+        transition: 0.2s;
+      }
+      .nav-item:hover > a .chev {
+        transform: rotate(180deg);
+      }
+
+      .mega {
+        position: absolute;
+        top: 100%;
+        inset-inline-start: 0;
+        min-width: 640px;
+        background: #fff;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: 0 24px 50px -18px rgba(0, 0, 0, 0.18);
+        padding: 12px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: 0.2s;
+        z-index: 70;
+      }
+      .nav-item:hover .mega {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+      }
+      .mega-2col {
+        display: grid;
+        grid-template-columns: 175px 1fr;
+        gap: 0;
+      }
+      .mega-brands {
+        border-inline-end: 1px solid var(--line);
+        padding: 6px;
+      }
+      .mega-brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 13px;
+        transition: 0.15s;
+        color: var(--ink);
+      }
+      .mega-brand:hover {
+        background: var(--paper);
+      }
+      .mega-brand.on {
+        background: var(--red-t);
+        color: var(--red);
+      }
+      .mega-brand .cnt {
+        font-size: 10.5px;
+        color: var(--mut);
+        font-weight: 400;
+      }
+      .mega-brand.on .cnt {
+        color: var(--red);
+        opacity: 0.8;
+      }
+      .mega-models {
+        padding: 6px 8px;
+      }
+      .mega-models h6 {
+        font-size: 11px;
+        color: var(--mut);
+        font-weight: 800;
+        padding: 4px 10px 8px;
+      }
+      .mega-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.15s;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      .mega-item:hover {
+        background: var(--paper);
+      }
+      .mega-item .mi-fig {
+        width: 54px;
+        height: 38px;
+        border-radius: 7px;
+        overflow: hidden;
+        background: var(--paper);
+        flex-shrink: 0;
+      }
+      .mega-item .mi-fig img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .mega-item .mi-tx {
+        flex: 1;
+        min-width: 0;
+      }
+      .mega-item .mi-tx b {
+        display: block;
+        font-size: 12.5px;
+        font-weight: 700;
+      }
+      .mega-item .mi-tx span {
+        font-size: 11px;
+        color: var(--red);
+        font-weight: 600;
+      }
+
+      .mmenu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 95;
+        padding: 16px 22px 20px;
+        border-bottom: 1px solid var(--line);
+        transform: translateY(-105%);
+        transition: 0.3s;
+      }
+      .mmenu.on {
+        transform: none;
+      }
+      .mmenu a {
+        display: block;
+        padding: 12px 4px;
+        font-weight: 600;
+        font-size: 14.5px;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .mmenu a:last-child {
+        border: none;
+      }
+      .mmenu .sub {
+        padding-right: 16px;
+        font-size: 13px;
+        color: var(--mut);
+        font-weight: 500;
+      }
+
+      .hero {
+        background: #fff;
+        color: var(--ink);
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid var(--line);
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        inset-inline-start: -5%;
+        width: 45%;
+        height: 160%;
+        background: radial-gradient(ellipse, var(--red-t), transparent 65%);
+        pointer-events: none;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: center;
+        padding: 56px 24px;
+        max-width: 1280px;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--red);
+        font-weight: 700;
+        font-size: 13px;
+        background: var(--red-t);
+        padding: 7px 16px;
+        border-radius: 30px;
+      }
+      h1 {
+        font-size: 52px;
+        line-height: 1.2;
+        font-weight: 900;
+        margin: 16px 0 14px;
+        letter-spacing: -0.5px;
+      }
+      h1 em {
+        font-style: normal;
+        color: var(--red);
+      }
+      .lead {
+        color: var(--mut);
+        font-size: 15.5px;
+        max-width: 480px;
+        line-height: 1.9;
+      }
+      .hero-cta {
+        display: flex;
+        gap: 12px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--red);
+        color: #fff;
+        border-radius: 12px;
+        padding: 13px 24px;
+        font-weight: 700;
+        font-size: 14px;
+        transition: 0.15s;
+        box-shadow: 0 8px 18px -8px rgba(200, 16, 46, 0.55);
+        text-decoration: none;
+      }
+      .btn:hover {
+        background: var(--red-d);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px -8px rgba(200, 16, 46, 0.65);
+      }
+      .btn:active {
+        transform: none;
+      }
+      .btn.w {
+        flex: 1;
+        justify-content: center;
+      }
+      .btn.ghost {
+        background: #fff;
+        color: var(--ink);
+        box-shadow: none;
+        border: 1.5px solid var(--line);
+      }
+      .btn.ghost:hover {
+        background: var(--paper);
+        border-color: var(--red);
+        color: var(--red);
+      }
+      .btn.full {
+        width: 100%;
+        justify-content: center;
+        padding: 13px;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 28px;
+        margin-top: 32px;
+        padding-top: 28px;
+        border-top: 1px solid var(--line);
+        flex-wrap: wrap;
+      }
+      .hero-stat b {
+        display: block;
+        font-size: 24px;
+        font-weight: 900;
+        color: var(--red);
+      }
+      .hero-stat span {
+        font-size: 12px;
+        color: var(--mut);
+      }
+
+      .hero-fig {
+        position: relative;
+      }
+      .hero-fig img {
+        width: 100%;
+        height: 440px;
+        object-fit: cover;
+        border-radius: 24px;
+        box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5);
+      }
+      .hero-fig .price-card {
+        position: absolute;
+        bottom: 20px;
+        inset-inline-start: 20px;
+        background: rgba(255, 255, 255, 0.97);
+        color: var(--ink);
+        border-radius: 16px;
+        padding: 14px 18px;
+        box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .hero-fig .price-card .pc-name {
+        font-weight: 800;
+        font-size: 14px;
+      }
+      .hero-fig .price-card .pc-price {
+        color: var(--red);
+        font-weight: 900;
+        font-size: 16px;
+      }
+      .hero-fig .price-card .pc-btn {
+        background: var(--red);
+        color: #fff;
+        border-radius: 10px;
+        padding: 9px 15px;
+        font-size: 12.5px;
+        font-weight: 700;
+        transition: 0.15s;
+        white-space: nowrap;
+      }
+      .hero-fig .price-card .pc-btn:hover {
+        background: var(--red-d);
+      }
+      .hero-fig .badge-fav {
+        position: absolute;
+        top: 18px;
+        inset-inline-end: 18px;
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--ink);
+        border-radius: 30px;
+        padding: 6px 14px;
+        font-size: 12px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .hero-fig .badge-fav svg {
+        color: #f2a413;
+      }
+
+      .services {
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+      .sv-in {
+        max-width: 1280px;
+        margin: auto;
+        padding: 0 24px;
+        display: flex;
+      }
+      .sv {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 8px;
+        min-width: 0;
+        transition: 0.2s;
+      }
+      .sv:hover {
+        transform: translateY(-2px);
+      }
+      .sv + .sv {
+        border-inline-start: 1px solid var(--line);
+      }
+      .sv .ic {
+        width: 46px;
+        height: 46px;
+        border-radius: 13px;
+        background: var(--grad-soft);
+        color: var(--red);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+      }
+      .sv b {
+        display: block;
+        font-size: 13.5px;
+      }
+      .sv span {
+        font-size: 11.5px;
+        color: var(--mut);
+      }
+
+      .amz {
+        background: var(--grad);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+      .amz::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 80% 20%,
+          rgba(255, 255, 255, 0.1),
+          transparent 50%
+        );
+        pointer-events: none;
+      }
+      .amz-head {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        max-width: 1280px;
+        margin: auto;
+        padding: 22px 24px 0;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      .amz-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 900;
+        font-size: 22px;
+      }
+      .amz-title .bolt {
+        width: 42px;
+        height: 42px;
+        background: #fff;
+        color: var(--red);
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.08);
+        }
+      }
+      .timer {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .timer .tb {
+        background: #fff;
+        color: var(--red);
+        font-weight: 800;
+        border-radius: 9px;
+        min-width: 42px;
+        padding: 6px 4px;
+        text-align: center;
+        font-size: 17px;
+        font-variant-numeric: tabular-nums;
+      }
+      .timer i {
+        font-style: normal;
+        font-weight: 800;
+        opacity: 0.8;
+      }
+      .amz-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 22px 24px 32px;
+        max-width: 1280px;
+        margin: auto;
+        position: relative;
+      }
+      .acard {
+        background: #fff;
+        color: var(--ink);
+        border-radius: 16px;
+        padding: 14px;
+        cursor: pointer;
+        transition: 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
+      .acard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 32px -14px rgba(0, 0, 0, 0.4);
+      }
+      .acard .fig {
+        height: 160px;
+        border-radius: 11px;
+        overflow: hidden;
+        background: var(--paper);
+        margin-bottom: 10px;
+      }
+      .acard .fig img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+      .acard:hover .fig img {
+        transform: scale(1.08);
+      }
+      .acard h4 {
+        font-size: 13.5px;
+        font-weight: 700;
+        line-height: 1.5;
+        height: 40px;
+        overflow: hidden;
+      }
+      .acard .off {
+        position: absolute;
+        top: 10px;
+        inset-inline-start: 10px;
+        background: var(--red);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        border-radius: 20px;
+        padding: 3px 10px;
+        z-index: 2;
+      }
+      .acard .pr {
+        font-weight: 800;
+        font-size: 14.5px;
+        margin-top: 4px;
+      }
+      .acard .pr small {
+        font-size: 10.5px;
+        color: var(--mut);
+        font-weight: 500;
+      }
+      .acard s {
+        display: block;
+        color: var(--mut);
+        font-size: 11.5px;
+      }
+
+      .sec {
+        max-width: 1280px;
+        margin: auto;
+        padding: 48px 24px 10px;
+      }
+      .sec-head {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+      .sec-head .bar {
+        width: 5px;
+        height: 28px;
+        background: var(--grad);
+        border-radius: 3px;
+      }
+      .sec-head h2 {
+        font-size: 27px;
+        font-weight: 900;
+      }
+      .sec-head .ln {
+        flex: 1;
+        height: 1px;
+        background: var(--line);
+      }
+      .sec-head .cnt {
+        color: var(--mut);
+        font-size: 13px;
+      }
+      .tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-bottom: 18px;
+      }
+      .tools .sp {
+        flex: 1;
+      }
+      .filter-bar {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: #fff;
+        border: 1.5px solid var(--line);
+        border-radius: 16px;
+        padding: 14px 18px;
+        margin-bottom: 22px;
+        flex-wrap: wrap;
+      }
+      .fb-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .fb-label {
+        font-size: 11px;
+        font-weight: 800;
+        color: var(--mut);
+        white-space: nowrap;
+      }
+      .fb-divider {
+        width: 1px;
+        height: 28px;
+        background: var(--line);
+      }
+      .fb-spacer {
+        flex: 1;
+      }
+      .chips {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .chip {
+        padding: 9px 17px;
+        border: 1.5px solid var(--line);
+        background: #fff;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--mut);
+        transition: 0.15s;
+      }
+      .chip:hover {
+        border-color: var(--red);
+        color: var(--red);
+      }
+      .chip.on {
+        background: var(--red);
+        border-color: var(--red);
+        color: #fff;
+        box-shadow: 0 6px 14px -6px rgba(200, 16, 46, 0.5);
+      }
+      .chip b {
+        font-weight: 400;
+        font-size: 11px;
+        opacity: 0.75;
+        margin-inline-start: 4px;
+      }
+      select {
+        appearance: none;
+        border: 1.5px solid var(--line);
+        background: #fff
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2371747C' stroke-width='2.5' stroke-linecap='round'><path d='M6 9l6 6 6-6'/></svg>")
+          no-repeat left 13px center;
+        padding: 10px 16px 10px 36px;
+        border-radius: 12px;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+      }
+      select:focus {
+        border-color: var(--red);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .card {
+        position: relative;
+        background: var(--card);
+        border: 1.5px solid var(--line);
+        border-radius: 18px;
+        padding: 14px;
+        transition: 0.25s;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+      }
+      .card:hover {
+        border-color: #e8b6bf;
+        box-shadow: 0 18px 38px -18px rgba(200, 16, 46, 0.25);
+        transform: translateY(-4px);
+      }
+      .fig {
+        background: var(--paper);
+        border-radius: 13px;
+        overflow: hidden;
+        height: 180px;
+        position: relative;
+      }
+      .fig img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s;
+      }
+      .card:hover .fig img {
+        transform: scale(1.06);
+      }
+      .badge {
+        position: absolute;
+        top: 22px;
+        inset-inline-start: 22px;
+        background: var(--red);
+        color: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 11px;
+        border-radius: 20px;
+        z-index: 2;
+      }
+      .fav {
+        position: absolute;
+        top: 20px;
+        inset-inline-end: 20px;
+        z-index: 2;
+        width: 36px;
+        height: 36px;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        color: #b9b4ab;
+        background: rgba(255, 255, 255, 0.92);
+        transition: 0.15s;
+      }
+      .fav:hover {
+        color: var(--red);
+      }
+      .fav.on {
+        color: var(--red);
+      }
+      .fav.on svg path {
+        fill: currentColor;
+      }
+      .cbody {
+        padding: 13px 4px 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+      .cmeta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11.5px;
+        color: var(--mut);
+      }
+      .cmeta .dot {
+        width: 3.5px;
+        height: 3.5px;
+        border-radius: 50%;
+        background: #c9c4bb;
+      }
+      .card h3 {
+        font-size: 15.5px;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+      .cspecs {
+        font-size: 12px;
+        color: var(--mut);
+      }
+      .ccolors {
+        display: flex;
+        gap: 5px;
+      }
+      .ccolors i {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        border: 1.5px solid rgba(0, 0, 0, 0.14);
+      }
+      .rate {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 12.5px;
+        font-weight: 700;
+      }
+      .rate svg {
+        color: #f2a413;
+      }
+      .rate span {
+        color: var(--mut);
+        font-weight: 400;
+        font-size: 11.5px;
+      }
+      .cbottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 8px;
+        margin-top: auto;
+        padding-top: 10px;
+      }
+      .price {
+        font-weight: 800;
+        font-size: 15.5px;
+      }
+      .price small {
+        font-size: 11px;
+        color: var(--mut);
+        font-weight: 500;
+        margin-inline-start: 3px;
+      }
+      .price s {
+        display: block;
+        color: var(--mut);
+        font-size: 11.5px;
+        font-weight: 400;
+      }
+      .add {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: var(--red);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        transition: 0.15s;
+        box-shadow: 0 8px 14px -7px rgba(200, 16, 46, 0.6);
+        flex-shrink: 0;
+      }
+      .add:hover {
+        background: var(--red-d);
+        transform: scale(1.05);
+      }
+
+      .grid.collapsed .card:nth-child(n + 7) {
+        display: none;
+      }
+      .show-toggle {
+        text-align: center;
+        margin: 32px 0 16px;
+      }
+      .show-toggle button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #fff;
+        border: 1.5px solid var(--line);
+        color: var(--ink);
+        padding: 13px 30px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 14px;
+        transition: 0.15s;
+      }
+      .show-toggle button:hover {
+        border-color: var(--red);
+        color: var(--red);
+        background: var(--red-t);
+      }
+      .show-toggle button svg {
+        transition: 0.2s;
+      }
+      .show-toggle.expanded button svg {
+        transform: rotate(180deg);
+      }
+
+      .empty {
+        text-align: center;
+        padding: 50px 20px;
+        grid-column: 1/-1;
+        color: var(--mut);
+      }
+      .empty button {
+        margin-top: 14px;
+        color: var(--red);
+        font-weight: 700;
+        border-bottom: 2px solid var(--red);
+        padding-bottom: 2px;
+      }
+
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(20, 20, 26, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s;
+        z-index: 90;
+      }
+      .overlay.on {
+        opacity: 1;
+        visibility: visible;
+      }
+      .drawer {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: min(430px, 100%);
+        background: #fff;
+        z-index: 100;
+        transform: translateX(-105%);
+        transition: transform 0.32s cubic-bezier(0.22, 0.8, 0.3, 1);
+        display: flex;
+        flex-direction: column;
+      }
+      .drawer.on {
+        transform: none;
+      }
+      .dr-head {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 18px 22px;
+        border-bottom: 1px solid var(--line);
+      }
+      .dr-head h3 {
+        font-size: 16.5px;
+        font-weight: 800;
+      }
+      .dr-head .n {
+        background: var(--red-t);
+        color: var(--red);
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 20px;
+        padding: 2px 10px;
+      }
+      .x-btn {
+        margin-inline-start: auto;
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        color: var(--mut);
+        transition: 0.15s;
+      }
+      .x-btn:hover {
+        background: var(--paper);
+        color: var(--red);
+      }
+      .dr-items {
+        flex: 1;
+        overflow-y: auto;
+        padding: 4px 22px;
+      }
+      .ci {
+        display: flex;
+        gap: 12px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .ci .fig {
+        width: 86px;
+        height: 66px;
+        flex-shrink: 0;
+        background: var(--paper);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .ci .fig img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .ci .inf {
+        flex: 1;
+        min-width: 0;
+      }
+      .ci h4 {
+        font-size: 13.5px;
+        font-weight: 700;
+      }
+      .ci .cr {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 11px;
+        color: var(--mut);
+        margin-top: 2px;
+      }
+      .ci .cr i {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        flex-shrink: 0;
+      }
+      .qty {
+        display: inline-flex;
+        align-items: center;
+        border: 1.5px solid var(--line);
+        border-radius: 10px;
+        margin-top: 8px;
+      }
+      .qty button {
+        width: 30px;
+        height: 30px;
+        display: grid;
+        place-items: center;
+        color: var(--mut);
+      }
+      .qty button:hover {
+        color: var(--red);
+      }
+      .qty b {
+        min-width: 26px;
+        text-align: center;
+        font-size: 13px;
+      }
+      .ci .side {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      .pp {
+        font-weight: 800;
+        font-size: 13px;
+        white-space: nowrap;
+      }
+      .del {
+        color: #b9b4ab;
+        transition: 0.15s;
+        width: 32px;
+        height: 32px;
+        display: grid;
+        place-items: center;
+        border-radius: 8px;
+      }
+      .del:hover {
+        color: var(--red);
+        background: var(--red-t);
+      }
+      .dr-empty {
+        flex: 1;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: var(--mut);
+        font-size: 13.5px;
+      }
+      .dr-foot {
+        border-top: 1px solid var(--line);
+        padding: 14px 22px 20px;
+        background: #fff;
+      }
+      .rw {
+        display: flex;
+        justify-content: space-between;
+        font-size: 13px;
+        color: var(--mut);
+        padding: 3px 0;
+      }
+      .rw.tot {
+        font-size: 15.5px;
+        color: var(--ink);
+        font-weight: 800;
+        padding-top: 10px;
+        margin-top: 8px;
+        border-top: 1px dashed var(--line);
+      }
+      .rw.tot .val {
+        color: var(--red);
+      }
+      .rw .fr {
+        color: var(--ok);
+        font-weight: 700;
+      }
+      .btn-check {
+        width: 100%;
+        justify-content: center;
+        margin-top: 14px;
+        padding: 14px;
+        font-size: 15px;
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        z-index: 110;
+        display: grid;
+        place-items: center;
+        padding: 18px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s;
+      }
+      .modal.on {
+        opacity: 1;
+        visibility: visible;
+      }
+      .mbox {
+        background: #fff;
+        border-radius: 22px;
+        max-width: 880px;
+        width: 100%;
+        max-height: 90vh;
+        overflow: auto;
+        position: relative;
+        transform: translateY(14px) scale(0.98);
+        transition: 0.28s cubic-bezier(0.22, 0.8, 0.3, 1);
+      }
+      .modal.on .mbox {
+        transform: none;
+      }
+      .mx {
+        position: absolute;
+        top: 14px;
+        inset-inline-start: 14px;
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--mut);
+        z-index: 3;
+        transition: 0.15s;
+      }
+      .mx:hover {
+        color: var(--red);
+        background: var(--red-t);
+      }
+      .pd {
+        display: grid;
+        grid-template-columns: 1fr 1.05fr;
+      }
+      .pd-fig {
+        background: var(--paper);
+        display: grid;
+        place-items: center;
+        padding: 38px 30px;
+        position: relative;
+        min-height: 340px;
+        gap: 16px;
+      }
+      .pd-fig .figwrap {
+        width: 100%;
+        max-width: 400px;
+        height: 280px;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .pd-fig .figwrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .pd-info {
+        padding: 28px 30px 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+      .pd-brand {
+        color: var(--red);
+        font-weight: 700;
+        font-size: 12.5px;
+      }
+      .pd-info h2 {
+        font-size: 23px;
+        font-weight: 900;
+        line-height: 1.4;
+      }
+      .pd-rate {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .pd-rate svg {
+        color: #f2a413;
+      }
+      .pd-rate span {
+        color: var(--mut);
+        font-weight: 400;
+      }
+      .pd-desc {
+        color: var(--mut);
+        font-size: 13.5px;
+        border-inline-start: 3px solid var(--red);
+        padding-inline-start: 12px;
+      }
+      .spec {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px 18px;
+      }
+      .spec div {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12.5px;
+        border-bottom: 1px dashed var(--line);
+        padding: 6px 0;
+      }
+      .spec div span {
+        color: var(--mut);
+      }
+      .spec div b {
+        font-weight: 600;
+      }
+      .pd-price {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 6px;
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+        flex-wrap: wrap;
+      }
+      .pd-price .v {
+        font-size: 22px;
+        font-weight: 900;
+        color: var(--red);
+      }
+      .pd-price .v small {
+        font-size: 12px;
+        color: var(--mut);
+        font-weight: 500;
+      }
+      .pd-price s {
+        color: var(--mut);
+        font-size: 14px;
+      }
+      .pd-price .off {
+        background: var(--red);
+        color: #fff;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+      .pd-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .pd-sw {
+        display: flex;
+        gap: 8px;
+      }
+      .sw {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 1.5px var(--line);
+        transition: 0.15s;
+      }
+      .sw:hover {
+        transform: scale(1.12);
+      }
+      .sw.on {
+        box-shadow: 0 0 0 2.5px var(--red);
+      }
+
+      .auth-box {
+        background: #fff;
+        border-radius: 22px;
+        max-width: 440px;
+        width: 100%;
+        padding: 32px 30px;
+        position: relative;
+        transform: translateY(14px);
+        transition: 0.28s cubic-bezier(0.22, 0.8, 0.3, 1);
+        max-height: 90vh;
+        overflow: auto;
+      }
+      .modal.on .auth-box {
+        transform: none;
+      }
+      .auth-brand {
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      .auth-brand .logo-mark {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 10px;
+      }
+      .auth-brand h3 {
+        font-size: 20px;
+        font-weight: 900;
+      }
+      .auth-tabs {
+        display: flex;
+        background: var(--paper);
+        border-radius: 12px;
+        padding: 4px;
+        gap: 4px;
+        margin-bottom: 22px;
+      }
+      .auth-tabs button {
+        flex: 1;
+        padding: 11px;
+        border-radius: 9px;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: var(--mut);
+        transition: 0.15s;
+      }
+      .auth-tabs button.on {
+        background: #fff;
+        color: var(--red);
+        box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.1);
+      }
+      .auth-sub {
+        color: var(--mut);
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 18px;
+      }
+      .field {
+        margin: 14px 0;
+      }
+      .field label {
+        display: block;
+        font-size: 12.5px;
+        font-weight: 600;
+        margin-bottom: 7px;
+        color: var(--ink);
+      }
+      .phone-input {
+        display: flex;
+        align-items: stretch;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: 0.15s;
+        background: var(--paper);
+      }
+      .phone-input:focus-within {
+        border-color: var(--red);
+        background: #fff;
+        box-shadow: 0 0 0 4px var(--red-t);
+      }
+      .phone-input .cc {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 0 14px;
+        background: #fff;
+        border-inline-end: 1.5px solid var(--line);
+        font-weight: 700;
+        font-size: 13.5px;
+        color: var(--ink);
+      }
+      .phone-input .cc .flag {
+        width: 18px;
+        height: 13px;
+        border-radius: 2px;
+        background: linear-gradient(
+          to bottom,
+          #239f40 0 33%,
+          #fff 33% 67%,
+          #da0000 67% 100%
+        );
+        display: inline-block;
+      }
+      .phone-input input {
+        flex: 1;
+        border: none;
+        background: none;
+        outline: none;
+        padding: 13px 14px;
+        font-size: 14.5px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        min-width: 0;
+      }
+      .err {
+        color: var(--red);
+        font-size: 12px;
+        margin-top: 6px;
+        display: none;
+      }
+      .err.on {
+        display: block;
+      }
+      .auth-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px;
+        font-size: 15px;
+        margin-top: 6px;
+      }
+      .auth-alt {
+        text-align: center;
+        margin-top: 18px;
+        font-size: 12px;
+        color: var(--mut);
+      }
+      .auth-alt hr {
+        border: none;
+        border-top: 1px solid var(--line);
+        margin: 14px 0;
+      }
+      .code-box {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        direction: ltr;
+      }
+      .code-box input {
+        width: 56px;
+        height: 62px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 800;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        outline: none;
+        transition: 0.15s;
+        background: var(--paper);
+      }
+      .code-box input:focus {
+        border-color: var(--red);
+        background: #fff;
+        box-shadow: 0 0 0 4px var(--red-t);
+      }
+      .code-resend {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 12.5px;
+        color: var(--mut);
+      }
+      .code-resend button {
+        color: var(--red);
+        font-weight: 700;
+        text-decoration: underline;
+      }
+      .codehint {
+        background: var(--red-t);
+        color: var(--red);
+        border-radius: 12px;
+        padding: 10px 12px;
+        font-size: 12.5px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 14px;
+      }
+
+      .success-ic {
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        background: var(--red);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        margin: 6px auto 16px;
+        animation: pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1);
+      }
+      @keyframes pop {
+        from {
+          transform: scale(0.3);
+          opacity: 0;
+        }
+      }
+      .ord-code {
+        background: var(--paper);
+        border: 1.5px dashed #d8d3ca;
+        border-radius: 12px;
+        padding: 10px;
+        text-align: center;
+        font-weight: 800;
+        font-size: 15px;
+        letter-spacing: 1px;
+        margin: 14px 0;
+      }
+      .ibody {
+        color: var(--mut);
+        font-size: 13.5px;
+        line-height: 2.1;
+      }
+
+      .checkout-box {
+        background: #fff;
+        border-radius: 22px;
+        max-width: 560px;
+        width: 100%;
+        padding: 28px 30px;
+        position: relative;
+        transform: translateY(14px);
+        transition: 0.28s cubic-bezier(0.22, 0.8, 0.3, 1);
+        max-height: 90vh;
+        overflow: auto;
+      }
+      .modal.on .checkout-box {
+        transform: none;
+      }
+      .co-steps {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 24px;
+      }
+      .co-step {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+      .co-step .circ {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--paper);
+        border: 1.5px solid var(--line);
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 14px;
+        color: var(--mut);
+        transition: 0.2s;
+      }
+      .co-step.on .circ {
+        background: var(--red);
+        border-color: var(--red);
+        color: #fff;
+        box-shadow: 0 6px 14px -6px rgba(200, 16, 46, 0.5);
+      }
+      .co-step.done .circ {
+        background: var(--ok);
+        border-color: var(--ok);
+        color: #fff;
+      }
+      .co-step .lbl {
+        font-size: 11.5px;
+        color: var(--mut);
+        font-weight: 600;
+      }
+      .co-step.on .lbl,
+      .co-step.done .lbl {
+        color: var(--ink);
+      }
+      .co-line {
+        flex: 0 0 24px;
+        height: 2px;
+        background: var(--line);
+        margin-top: -22px;
+        align-self: flex-start;
+        margin-top: 17px;
+      }
+      .co-line.done {
+        background: var(--ok);
+      }
+      .co-h {
+        font-size: 18px;
+        font-weight: 900;
+        margin-bottom: 6px;
+      }
+      .co-sub {
+        color: var(--mut);
+        font-size: 12.5px;
+        margin-bottom: 18px;
+      }
+      .co-summary {
+        background: var(--paper);
+        border-radius: 12px;
+        padding: 14px 16px;
+        margin-bottom: 18px;
+      }
+      .co-summary .si {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 0;
+        font-size: 12.5px;
+      }
+      .co-summary .si img {
+        width: 38px;
+        height: 28px;
+        border-radius: 6px;
+        object-fit: cover;
+      }
+      .co-summary .si b {
+        font-weight: 700;
+      }
+      .co-summary .si .qp {
+        color: var(--mut);
+        font-size: 11px;
+      }
+      .co-summary .si .pp {
+        margin-inline-start: auto;
+        font-weight: 700;
+      }
+      .co-summary .total {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 10px;
+        margin-top: 6px;
+        border-top: 1px dashed var(--line);
+        font-weight: 800;
+        font-size: 14px;
+      }
+      .co-summary .total .v {
+        color: var(--red);
+      }
+      .co-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .co-field {
+        margin-bottom: 12px;
+      }
+      .co-field label {
+        display: block;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: var(--ink);
+      }
+      .co-field input,
+      .co-field select,
+      .co-field textarea {
+        width: 100%;
+        border: 1.5px solid var(--line);
+        border-radius: 10px;
+        padding: 11px 12px;
+        font-size: 13px;
+        outline: none;
+        transition: 0.15s;
+        background: var(--paper);
+        font-family: inherit;
+      }
+      .co-field input:focus,
+      .co-field select:focus,
+      .co-field textarea:focus {
+        border-color: var(--red);
+        background: #fff;
+        box-shadow: 0 0 0 3px var(--red-t);
+      }
+      .co-field textarea {
+        resize: vertical;
+        min-height: 70px;
+      }
+      .co-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .co-actions .btn {
+        flex: 1;
+        justify-content: center;
+        padding: 13px;
+        font-size: 14px;
+      }
+      .co-actions .btn.ghost {
+        background: var(--paper);
+        color: var(--ink);
+        border: 1.5px solid var(--line);
+        box-shadow: none;
+      }
+      .co-actions .btn.ghost:hover {
+        background: var(--line);
+      }
+      .pay-method {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 16px;
+      }
+      .pay-method label {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.15s;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .pay-method label:hover {
+        border-color: var(--red);
+      }
+      .pay-method input {
+        accent-color: var(--red);
+      }
+      .pay-method label.on {
+        border-color: var(--red);
+        background: var(--red-t);
+      }
+      .card-visual {
+        background: linear-gradient(135deg, #1a1b20 0%, #2a1418 100%);
+        border-radius: 16px;
+        padding: 18px;
+        color: #fff;
+        margin-bottom: 16px;
+        position: relative;
+        overflow: hidden;
+      }
+      .card-visual::before {
+        content: "";
+        position: absolute;
+        top: -30%;
+        inset-inline-end: -10%;
+        width: 50%;
+        height: 160%;
+        background: radial-gradient(
+          ellipse,
+          rgba(200, 16, 46, 0.4),
+          transparent 60%
+        );
+      }
+      .card-visual .cv-chip {
+        width: 38px;
+        height: 28px;
+        background: linear-gradient(135deg, #f4d03f, #b7950b);
+        border-radius: 6px;
+        margin-bottom: 14px;
+        position: relative;
+        z-index: 1;
+      }
+      .card-visual .cv-num {
+        font-size: 17px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+        position: relative;
+        z-index: 1;
+        margin-bottom: 14px;
+      }
+      .card-visual .cv-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        position: relative;
+        z-index: 1;
+      }
+      .card-visual .cv-row span {
+        opacity: 0.7;
+      }
+      .card-visual .cv-row b {
+        font-weight: 600;
+      }
+      .card-visual .cv-brand {
+        position: absolute;
+        bottom: 14px;
+        inset-inline-end: 18px;
+        font-size: 16px;
+        font-weight: 900;
+        font-style: italic;
+        opacity: 0.9;
+      }
+      .co-success {
+        text-align: center;
+        padding: 10px 0;
+      }
+      .co-success .ok-ic {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: var(--ok);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 18px;
+        animation: pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1);
+      }
+      .co-success h3 {
+        font-size: 19px;
+        font-weight: 900;
+        margin-bottom: 8px;
+      }
+      .co-success p {
+        color: var(--mut);
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+      .co-success .order-info {
+        background: var(--paper);
+        border-radius: 12px;
+        padding: 14px;
+        text-align: right;
+        margin-bottom: 16px;
+      }
+      .co-success .order-info .ri {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+        font-size: 12.5px;
+      }
+      .co-success .order-info .ri span {
+        color: var(--mut);
+      }
+      .co-success .order-info .ri b {
+        font-weight: 700;
+      }
+
+      .toasts {
+        position: fixed;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 130;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        pointer-events: none;
+        width: max-content;
+        max-width: 92vw;
+      }
+      .toast {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--ink);
+        color: #fff;
+        padding: 11px 18px;
+        border-radius: 14px;
+        font-size: 13.5px;
+        font-weight: 600;
+        box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.4);
+        animation: tin 0.3s cubic-bezier(0.2, 1.4, 0.4, 1);
+      }
+      .toast.out {
+        animation: tout 0.25s forwards;
+      }
+      .toast .ti {
+        color: #6ee7a0;
+      }
+      .toast.bad .ti {
+        color: #ff8b96;
+      }
+      @keyframes tin {
+        from {
+          transform: translateY(14px);
+          opacity: 0;
+        }
+      }
+      @keyframes tout {
+        to {
+          transform: translateY(10px);
+          opacity: 0;
+        }
+      }
+
+      footer {
+        background: var(--grad);
+        color: #fff;
+        margin-top: 56px;
+      }
+      .ft-in {
+        max-width: 1280px;
+        margin: auto;
+        padding: 50px 24px 0;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr 1.4fr;
+        gap: 36px;
+      }
+      .ft h5 {
+        font-size: 14.5px;
+        font-weight: 800;
+        margin-bottom: 14px;
+        color: #fff;
+      }
+      .ft a {
+        display: block;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 13px;
+        padding: 5px 0;
+        text-decoration: none;
+        transition: 0.15s;
+        cursor: pointer;
+      }
+      .ft a:hover {
+        color: #ff6b7a;
+        padding-inline-start: 4px;
+      }
+      .ft .about {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 12.5px;
+        line-height: 2.1;
+      }
+      .brandrow {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin-bottom: 14px;
+        font-weight: 800;
+        font-size: 18px;
+      }
+      .brandrow .logo-mark {
+        background: #fff;
+        color: var(--red);
+      }
+      .ft-contact {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 12.5px;
+        line-height: 2;
+        margin-top: 14px;
+      }
+      .ft-contact b {
+        color: #fff;
+      }
+      .news {
+        display: flex;
+        border: 1.5px solid rgba(255, 255, 255, 0.2);
+        border-radius: 12px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.08);
+        margin-top: 10px;
+      }
+      .news input {
+        flex: 1;
+        border: none;
+        background: none;
+        outline: none;
+        padding: 11px 14px;
+        font-size: 13px;
+        min-width: 0;
+        color: #fff;
+      }
+      .news input::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .news button {
+        background: #fff;
+        color: var(--red);
+        padding: 0 18px;
+        font-weight: 700;
+        font-size: 13px;
+        transition: 0.15s;
+      }
+      .news button:hover {
+        background: rgba(255, 255, 255, 0.88);
+      }
+      .socials {
+        display: flex;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .socials a {
+        width: 38px;
+        height: 38px;
+        border-radius: 11px;
+        background: rgba(255, 255, 255, 0.15);
+        display: grid;
+        place-items: center;
+        color: #fff;
+        transition: 0.15s;
+      }
+      .socials a:hover {
+        background: #fff;
+        color: var(--red);
+        transform: translateY(-2px);
+      }
+      .ft-bt {
+        max-width: 1280px;
+        margin: auto;
+        padding: 20px 24px;
+        margin-top: 36px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: space-between;
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 12.5px;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      @media (max-width: 1080px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          padding-top: 36px;
+        }
+        .hero-fig img {
+          height: 360px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+        .pd {
+          grid-template-columns: 1fr;
+        }
+        .ft-in {
+          grid-template-columns: 1fr 1fr;
+        }
+        .amz-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 900px) {
+        .nav {
+          display: none;
+        }
+        .btn-login {
+          display: none;
+        }
+        .btn-menu {
+          display: grid;
+        }
+        .mmenu {
+          display: block;
+        }
+      }
+      @media (max-width: 700px) {
+        .sv-in {
+          flex-wrap: wrap;
+          gap: 0 14px;
+        }
+        .sv {
+          flex: 1 1 42%;
+        }
+        .sv + .sv {
+          border-inline-start: none;
+        }
+        .ft-in {
+          grid-template-columns: 1fr;
+        }
+        h1 {
+          font-size: 32px;
+        }
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .amz-grid {
+          grid-template-columns: 1fr;
+        }
+        .card {
+          padding: 11px;
+        }
+        .hero-fig img {
+          height: 280px;
+        }
+        .hero-stats {
+          gap: 18px;
+        }
+        .hero-stat b {
+          font-size: 20px;
+        }
+        .code-box input {
+          width: 48px;
+          height: 56px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      ارسال رایگان با باربری ویژه برای خرید بالای ۵۰۰ میلیون تومان — ضمانت اصالت
+      کالا روی همه موتورها
+    </div>
+
+    <header class="hdr">
+      <div class="hdr-in">
+        <button class="icon-btn btn-menu" id="menuBtn" aria-label="منو">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+        <a class="logo" href="#">
+          <span class="logo-mark"
+            ><svg
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="2.5" />
+              <path
+                d="M12 3v6.5M12 14.5V21M3.8 7.5l5.6 3.2M14.6 13.3l5.6 3.2M20.2 7.5l-5.6 3.2M9.4 13.3l-5.6 3.2"
+              /></svg
+          ></span>
+          <span><b>موتورلند</b><small>فروشگاه تخصصی موتورسیکلت</small></span>
+        </a>
+        <form class="search" id="searchForm">
+          <input
+            id="search"
+            placeholder="جستجوی نام موتور، برند یا دسته‌بندی..."
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="جستجو">
+            <svg
+              width="19"
+              height="19"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <circle cx="11" cy="11" r="7" />
+              <path d="M20.5 20.5 16 16" />
+            </svg>
+          </button>
+        </form>
+        <div class="hact">
+          <button class="btn-login" id="authBtn">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+            >
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4.5 20.5c1.2-3.5 4-5.5 7.5-5.5s6.3 2 7.5 5.5" />
+            </svg>
+            <span id="authTxt">ورود | ثبت‌نام</span>
+          </button>
+          <button class="icon-btn" id="cartBtn" aria-label="سبد خرید">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="20" r="1.6" />
+              <circle cx="17" cy="20" r="1.6" />
+              <path d="M2.5 3.5h2.2l2.5 12h10.6l2-8H6.1" />
+            </svg>
+            <span class="badge-n" id="cartN" style="display: none">۰</span>
+          </button>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="nav-in">
+          <div class="nav-item">
+            <a href="#amazing" class="hot"
+              ><svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5z" /></svg
+              >پیشنهاد شگفت‌انگیز</a
+            >
+          </div>
+          <div class="nav-item" id="megaWrap">
+            <a data-cat="all"
+              >همه موتورها
+              <svg
+                class="chev"
+                width="13"
+                height="13"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              >
+                <path d="M6 9l6 6 6-6" /></svg
+            ></a>
+            <div class="mega" id="megaPanel">
+              <div class="mega-2col">
+                <div class="mega-brands" id="megaBrands"></div>
+                <div class="mega-models" id="megaModels"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item"><a data-cat="street">خیابانی و اسپرت</a></div>
+          <div class="nav-item"><a data-cat="cruiser">کروز و کلاسیک</a></div>
+          <div class="nav-item"><a data-cat="offroad">آفرود و دوال</a></div>
+          <div class="nav-item"><a data-cat="scooter">اسکوتر</a></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mmenu" id="mmenu">
+      <a href="#amazing" id="mAmz">پیشنهاد شگفت‌انگیز</a>
+      <a data-cat="all"><b>همه موتورها</b></a>
+      <a data-cat="street" class="sub">↳ خیابانی و اسپرت</a>
+      <a data-cat="cruiser" class="sub">↳ کروز و کلاسیک</a>
+      <a data-cat="offroad" class="sub">↳ آفرود و دوال</a>
+      <a data-cat="scooter" class="sub">↳ اسکوتر</a>
+      <a id="mAuth">ورود | ثبت‌نام</a>
+    </div>
+    <main>
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="hero-kicker">🏍️ فروشگاه تخصصی موتورسیکلت از ۱۳۹۲</span>
+            <h1>مسیر را با <em>قدرت</em> شروع کن</h1>
+            <p class="lead">
+              از کروز شهری تا موتورکراس حرفه‌ای — موتورسیکلت اورجینال با ضمانت
+              اصالت، گارانتی ۲ ساله و باربری مطمئن به سراسر کشور.
+            </p>
+            <div class="hero-cta">
+              <a class="btn" href="#products"
+                ><svg
+                  width="17"
+                  height="17"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.9"
+                  stroke-linecap="round"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" /></svg
+                >مشاهده همه موتورها</a
+              >
+              <a class="btn ghost" href="#amazing"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5z" /></svg
+                >پیشنهاد شگفت‌انگیز</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat"><b>۱۴+</b><span>مدل اورجینال</span></div>
+              <div class="hero-stat"><b>۶</b><span>برند جهانی</span></div>
+              <div class="hero-stat"><b>۱۲</b><span>سال تجربه</span></div>
+              <div class="hero-stat"><b>۲K+</b><span>فروش موفق</span></div>
+            </div>
+          </div>
+          <div class="hero-fig">
+            <img
+              id="heroImg"
+              src="https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6097701b6264.jpg"
+              alt="کاوازاکی Ninja 400"
+            />
+            <div class="badge-fav">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5L2.5 9.5l6.6-.9z"
+                /></svg
+              >پرفروش
+            </div>
+            <div class="price-card">
+              <div>
+                <div class="pc-name" id="heroName">کاوازاکی Ninja 400</div>
+                <div class="pc-price" id="heroPrice">۳۸۵٬۰۰۰٬۰۰۰ تومان</div>
+              </div>
+              <button class="pc-btn" id="heroAdd">افزودن به سبد</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="services">
+        <div class="sv-in">
+          <div class="sv">
+            <span class="ic"
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M1.5 6h11.5v10H1.5zM13 9.5h4l3 3.5v3h-7z" />
+                <circle cx="6" cy="18.2" r="1.8" />
+                <circle cx="17" cy="18.2" r="1.8" /></svg
+            ></span>
+            <div><b>باربری مطمئن</b><span>ارسال به سراسر کشور</span></div>
+          </div>
+          <div class="sv">
+            <span class="ic"
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M12 2.5l7.5 3v6c0 5-3.2 8.3-7.5 10-4.3-1.7-7.5-5-7.5-10v-6z"
+                />
+                <path d="M9 12l2.2 2.2 4.3-4.4" /></svg
+            ></span>
+            <div><b>ضمانت اصالت کالا</b><span>سری‌محصول اورجینال</span></div>
+          </div>
+          <div class="sv">
+            <span class="ic"
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              >
+                <path d="M20 12a8 8 0 1 1-2.34-5.66" />
+                <path d="M20 3v4.5h-4.5" /></svg
+            ></span>
+            <div><b>۷ روز مهلت بازگشت</b><span>بدون قید و شرط</span></div>
+          </div>
+          <div class="sv">
+            <span class="ic"
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M4 13a8 8 0 0 1 16 0" />
+                <rect x="3" y="13" width="4" height="6" rx="1.6" />
+                <rect x="17" y="13" width="4" height="6" rx="1.6" /></svg
+            ></span>
+            <div><b>پشتیبانی تخصصی</b><span>همه‌روزه، حتی جمعه‌ها</span></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="amz" id="amazing">
+        <div class="amz-head">
+          <div class="amz-title">
+            <span class="bolt"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M13 2 4.5 13.5H11L9.5 22 19 9.5h-6.5z" /></svg
+            ></span>
+            پیشنهاد شگفت‌انگیز
+          </div>
+          <div class="timer">
+            <span class="tb" id="tH">۰۰</span><i>:</i
+            ><span class="tb" id="tM">۰۰</span><i>:</i
+            ><span class="tb" id="tS">۰۰</span>
+          </div>
+        </div>
+        <div class="amz-grid" id="amzStrip"></div>
+      </section>
+
+      <section class="sec" id="products">
+        <div class="sec-head">
+          <span class="bar"></span>
+          <h2>همه موتورها</h2>
+          <span class="ln"></span><span class="cnt" id="resN"></span>
+        </div>
+        <div class="filter-bar">
+          <div class="fb-group">
+            <span class="fb-label">دسته‌بندی</span>
+            <div class="chips" id="catChips"></div>
+          </div>
+          <div class="fb-divider"></div>
+          <div class="fb-group">
+            <span class="fb-label">برند</span>
+            <div class="chips" id="brandChips"></div>
+          </div>
+          <div class="fb-spacer"></div>
+          <select id="sortSel">
+            <option value="smart">پیشنهاد موتورلند</option>
+            <option value="sold">پرفروش‌ترین</option>
+            <option value="cheap">ارزان‌ترین</option>
+            <option value="exp">گران‌ترین</option>
+            <option value="off">بیشترین تخفیف</option>
+          </select>
+        </div>
+        <div class="grid" id="grid"></div>
+        <div class="show-toggle" id="showToggle" style="display: none">
+          <button id="showMoreBtn">
+            <span id="showMoreTxt">نمایش بیشتر</span>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+            >
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="ft-in">
+        <div class="ft">
+          <div class="brandrow">
+            <span class="logo-mark"
+              ><svg
+                width="23"
+                height="23"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <circle cx="12" cy="12" r="2.5" />
+                <path
+                  d="M12 3v6.5M12 14.5V21M3.8 7.5l5.6 3.2M14.6 13.3l5.6 3.2M20.2 7.5l-5.6 3.2M9.4 13.3l-5.6 3.2"
+                /></svg
+            ></span>
+            موتورلند
+          </div>
+          <p class="about">
+            موتورلند از سال ۱۳۹۲ مرجع خرید موتورسیکلت‌های اورجینال با گارانتی
+            رسمی، خدمات پس از فروش کامل و مجموعه‌ای از لوازم جانبی اصل است.
+            مأموریت ما سفر امن تو روی دو چرخ است.
+          </p>
+          <div class="ft-contact">
+            <b>تلفن:</b> ۰۲۱-۹۱۰۰۸۸۰۰<br />
+            <b>واتساپ:</b> ۰۹۱۲-۰۰۰-۸۸۰۰<br />
+            <b>نشانی:</b> تهران، بزرگراه فتح، شهرک صناعی، پلاک ۱۲
+          </div>
+          <div class="socials">
+            <a href="#" aria-label="اینستاگرام"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg
+            ></a>
+            <a href="#" aria-label="تلگرام"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M21.5 4.5l-3 15c-.2 1-.8 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-.9.5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.4 13.5l-4.5-1.4c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.3 1.2z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="واتساپ"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2a10 10 0 0 0-8.6 15l-1.4 5 5.1-1.3A10 10 0 1 0 12 2zm0 2a8 8 0 1 1 0 16 8 8 0 0 1 0-16zm-3 4c-.3 0-.7.1-1 .5-.4.4-1.2 1.2-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5 2.9 1.1 3.5.9 4.1.9.6-.1 2-.8 2.3-1.6.3-.8.3-1.5.2-1.6-.1-.1-.3-.2-.7-.4-.4-.2-2-1-2.3-1.1-.3-.1-.6-.2-.8.2-.2.4-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.4-.2-1.5-.6-2.9-1.8-1.1-1-1.8-2.2-2-2.5-.2-.4 0-.6.2-.8l.6-.6c.2-.2.2-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.7-1.8-1-2.4-.3-.6-.5-.5-.7-.5z"
+                /></svg
+            ></a>
+            <a href="#" aria-label="یوتیوب"
+              ><svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M22 12s0-3-.4-4.4c-.2-.8-.9-1.4-1.6-1.6C18.5 5.5 12 5.5 12 5.5s-6.5 0-8 .5c-.7.2-1.4.8-1.6 1.6C2 9 2 12 2 12s0 3 .4 4.4c.2.8.9 1.4 1.6 1.6 1.5.5 8 .5 8 .5s6.5 0 8-.5c.7-.2 1.4-.8 1.6-1.6.4-1.4.4-4.4.4-4.4zM10 15V9l5 3-5 3z"
+                /></svg
+            ></a>
+          </div>
+        </div>
+        <div class="ft">
+          <h5>دسترسی سریع</h5>
+          <a data-cat-link="street">موتورهای خیابانی</a>
+          <a data-cat-link="cruiser">کروز و کلاسیک</a>
+          <a data-cat-link="offroad">آفرود و دوال</a>
+          <a data-cat-link="scooter">اسکوتر</a>
+          <a data-info="about">درباره ما</a>
+        </div>
+        <div class="ft">
+          <h5>خدمات مشتریان</h5>
+          <a data-info="contact">تماس با ما</a>
+          <a data-info="terms">قوانین و مقررات</a>
+          <a data-info="ship">شیوه ارسال و باربری</a>
+          <a data-info="ret">رویه بازگشت کالا</a>
+        </div>
+        <div class="ft">
+          <h5>خبرنامه موتورلند</h5>
+          <p class="about">
+            از تخفیف‌های هفتگی و مدل‌های تازه‌رسیده زودتر از همه باخبر شو.
+          </p>
+          <form class="news" id="newsForm">
+            <input
+              id="newsIn"
+              type="email"
+              placeholder="ایمیل شما"
+              autocomplete="off"
+            /><button type="submit">عضویت</button>
+          </form>
+        </div>
+      </div>
+      <div class="ft-bt">
+        <span>© ۱۴۰۳ موتورلند — تمامی حقوق محفوظ است.</span>
+        <span>طراحی‌شده با عشق به دنیای دوچرخ</span>
+      </div>
+    </footer>
+
+    <aside class="drawer" id="drawer">
+      <div class="dr-head">
+        <svg
+          width="21"
+          height="21"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.9"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="9" cy="20" r="1.6" />
+          <circle cx="17" cy="20" r="1.6" />
+          <path d="M2.5 3.5h2.2l2.5 12h10.6l2-8H6.1" />
+        </svg>
+        <h3>سبد خرید</h3>
+        <span class="n" id="drN">۰</span>
+        <button class="x-btn" id="drClose" aria-label="بستن">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+      <div class="dr-items" id="drItems"></div>
+      <div class="dr-foot" id="drFoot" style="display: none">
+        <div class="rw">
+          <span>جمع کالاها</span><span><span id="sSub"></span> تومان</span>
+        </div>
+        <div class="rw">
+          <span>سود شما از خرید</span
+          ><span id="sDisc" style="color: var(--red)"></span>
+        </div>
+        <div class="rw"><span>هزینه باربری</span><span id="sShip"></span></div>
+        <div class="rw tot">
+          <span>مبلغ قابل پرداخت</span
+          ><span class="val"><span id="sTot"></span> تومان</span>
+        </div>
+        <button class="btn btn-check" id="checkout">ثبت سفارش و پرداخت</button>
+      </div>
+    </aside>
+    <div class="overlay" id="ovl"></div>
+
+    <div class="modal" id="pModal"><div class="mbox" id="pBody"></div></div>
+
+    <div class="modal" id="aModal">
+      <div class="auth-box">
+        <button class="mx" data-close aria-label="بستن">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <div class="auth-brand">
+          <span class="logo-mark"
+            ><svg
+              width="23"
+              height="23"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="2.5" />
+              <path
+                d="M12 3v6.5M12 14.5V21M3.8 7.5l5.6 3.2M14.6 13.3l5.6 3.2M20.2 7.5l-5.6 3.2M9.4 13.3l-5.6 3.2"
+              /></svg
+          ></span>
+          <h3 id="authTitle">ورود به موتورلند</h3>
+        </div>
+        <div class="auth-tabs" id="authTabs">
+          <button class="on" data-tab="login">ورود</button>
+          <button data-tab="register">ثبت‌نام</button>
+        </div>
+        <p class="auth-sub" id="authSub">
+          شماره موبایل خود را وارد کنید تا کد تأیید برایتان پیامک شود.
+        </p>
+        <div id="aStep1">
+          <div class="field">
+            <label>شماره موبایل</label>
+            <div class="phone-input">
+              <span class="cc"><i class="flag"></i> +۹۸</span>
+              <input
+                id="phone"
+                inputmode="tel"
+                placeholder="0912 000 0000"
+                maxlength="11"
+              />
+            </div>
+            <div class="err" id="phErr">
+              شماره موبایل معتبر نیست (۱۱ رقم که با ۰۹ شروع می‌شود).
+            </div>
+          </div>
+          <button class="btn auth-btn" id="authGo">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" /></svg
+            >دریافت کد تأیید
+          </button>
+          <div class="auth-alt">
+            <hr />
+            با ورود، قوانین و مقررات موتورلند را می‌پذیرم.
+          </div>
+        </div>
+        <div id="aStep2" style="display: none">
+          <div class="codehint" id="codeHint"></div>
+          <div class="field">
+            <label style="text-align: center">کد ۴ رقمی را وارد کنید</label>
+            <div class="code-box" id="codeBox">
+              <input maxlength="1" inputmode="numeric" />
+              <input maxlength="1" inputmode="numeric" />
+              <input maxlength="1" inputmode="numeric" />
+              <input maxlength="1" inputmode="numeric" />
+            </div>
+            <div class="err" id="codeErr">کد واردشده درست نیست.</div>
+          </div>
+          <button class="btn auth-btn" id="codeGo">تأیید و ادامه</button>
+          <div class="code-resend">
+            کد را دریافت نکردید؟ <button id="resendBtn">ارسال دوباره</button>
+          </div>
+          <button
+            class="btn auth-btn"
+            id="aBack"
+            style="
+              background: none;
+              color: var(--mut);
+              box-shadow: none;
+              margin-top: 8px;
+              border: 1.5px solid var(--line);
+            "
+          >
+            ویرایش شماره
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="iModal">
+      <div class="auth-box">
+        <button class="mx" data-close aria-label="بستن">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <h3
+          id="ibT"
+          style="font-size: 19px; font-weight: 900; margin-bottom: 12px"
+        ></h3>
+        <div class="ibody" id="ibB"></div>
+      </div>
+    </div>
+
+    <div class="modal" id="sModal">
+      <div class="checkout-box">
+        <button class="mx" data-close aria-label="بستن">
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </button>
+        <div id="coContent"></div>
+      </div>
+    </div>
+
+    <div class="toasts" id="toasts"></div>
+
+    <script>
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => [...document.querySelectorAll(s)];
+      const fa = (n) => Number(n).toLocaleString("fa-IR");
+      const faD = (s) => String(s).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
+      const enD = (s) =>
+        String(s).replace(/[۰-۹]/g, (d) => "۰۱۲۳۴۵۶۷۸۹".indexOf(d));
+      const TYPE_FA = {
+        street: "خیابانی",
+        cruiser: "کروز",
+        offroad: "آفرود",
+        scooter: "اسکوتر",
+      };
+      const COLOR_FA = {
+        "#C8102E": "قرمز ریسینگ",
+        "#1D1E22": "مشکی متالیک",
+        "#274B6D": "آبی نفتی",
+        "#2E7D46": "سبز مسابقه",
+        "#B9BEC6": "نقره‌ای",
+        "#E8E4DC": "سفید صدفی",
+      };
+      const IC = {
+        star: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5 6.1 20.6l1.2-6.5L2.5 9.5l6.6-.9z"/></svg>',
+        heart:
+          '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"><path d="M12 20.5S3.5 15.4 3.5 9.4C3.5 6.4 5.9 4 8.9 4c1.5 0 2.6.7 3.1 1.4C12.5 4.7 13.7 4 15.1 4c3 0 5.4 2.4 5.4 5.4 0 6-8.5 11.1-8.5 11.1z"/></svg>',
+        cart: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M2.5 3.5h2.2l2.5 12h10.6l2-8H6.1"/></svg>',
+        check:
+          '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg>',
+        x: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+      };
+
+      const PRODUCTS = [
+        {
+          id: 1,
+          name: "کاوازاکی Ninja 400",
+          brand: "کاوازاکی",
+          type: "street",
+          cc: 400,
+          year: 2023,
+          price: 385000000,
+          old: 429000000,
+          rating: 4.7,
+          sold: 132,
+          cool: "مایع",
+          tank: 14,
+          weight: 168,
+          colors: ["#C8102E", "#1D1E22", "#274B6D"],
+          badge: "پرفروش",
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/6097701b6264.jpg",
+          desc: "اسپرت سبک با موتور دوسیلندر خطی؛ انتخاب اول برای شروع جدی دنیای اسپرت با صدای خوش و فرمان‌پذیری عالی.",
+        },
+        {
+          id: 2,
+          name: "هوندا CB650R",
+          brand: "هوندا",
+          type: "street",
+          cc: 650,
+          year: 2024,
+          price: 612000000,
+          old: null,
+          rating: 4.9,
+          sold: 87,
+          cool: "مایع",
+          tank: 15.4,
+          weight: 202,
+          colors: ["#C8102E", "#1D1E22"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/46a57bcbcaff.jpg",
+          desc: "نیکد کلاس متوسط هوندا با صدای چهارسیلندر افسانه‌ای، کیفیت ساخت بی‌رقیب و ابعاد دوستانه برای شهر.",
+        },
+        {
+          id: 3,
+          name: "یاماها MT-07",
+          brand: "یاماها",
+          type: "street",
+          cc: 689,
+          year: 2023,
+          price: 548000000,
+          old: 579000000,
+          rating: 4.8,
+          sold: 210,
+          cool: "مایع",
+          tank: 14,
+          weight: 184,
+          colors: ["#274B6D", "#1D1E22", "#C8102E"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1e4db7881d60.jpg",
+          desc: "دوسیلندر پرگشتاور CP2 با طراحی تاریک و متمرکز؛ محبوب‌ترین نیکد بازار برای شهر و جاده.",
+        },
+        {
+          id: 4,
+          name: "باجاج پالسار NS200",
+          brand: "باجاج",
+          type: "street",
+          cc: 199,
+          year: 2024,
+          price: 96500000,
+          old: 112000000,
+          rating: 4.3,
+          sold: 512,
+          cool: "مایع",
+          tank: 12,
+          weight: 158,
+          colors: ["#C8102E", "#1D1E22"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f3d76817ba39.jpg",
+          desc: "بهترین نسبت قیمت به توان برای ترافیک شهری؛ لاستیک پهن، ترمز دیسکی و قطعات فراوان در بازار.",
+        },
+        {
+          id: 5,
+          name: "هوندا Rebel 500",
+          brand: "هوندا",
+          type: "cruiser",
+          cc: 471,
+          year: 2023,
+          price: 495000000,
+          old: null,
+          rating: 4.6,
+          sold: 64,
+          cool: "مایع",
+          tank: 11.2,
+          weight: 191,
+          colors: ["#1D1E22", "#C8102E", "#B9BEC6"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1310f9135fae.jpg",
+          desc: "کروزر کم‌ارتفاع و دوستانه با حس کلاسیک؛ مناسب سفرهای آرام شهری و شروع دنیای کروزر.",
+        },
+        {
+          id: 6,
+          name: "تریومف Bonneville T120",
+          brand: "تریومف",
+          type: "cruiser",
+          cc: 1200,
+          year: 2022,
+          price: 1250000000,
+          old: 1350000000,
+          rating: 4.9,
+          sold: 23,
+          cool: "مایع",
+          tank: 12,
+          weight: 224,
+          colors: ["#1D1E22", "#274B6D"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/1442fcd6d311.jpg",
+          desc: "کلاسیک بریتانیایی با موتور پارالل‌توین ۱۲۰۰ سی‌سی؛ جزئیات کروم، دست‌دوز و مالکیت با افتخار.",
+        },
+        {
+          id: 7,
+          name: "هوندا CRF300L",
+          brand: "هوندا",
+          type: "offroad",
+          cc: 286,
+          year: 2024,
+          price: 328000000,
+          old: 352000000,
+          rating: 4.7,
+          sold: 95,
+          cool: "مایع",
+          tank: 12.8,
+          weight: 142,
+          colors: ["#C8102E", "#1D1E22"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/36808a944002.jpg",
+          desc: "دوال‌اسپورت سبک برای آسفالت و خاک؛ ارتفاع زیاد، تعلیق بلند و اعتماد کامل در آفرود.",
+        },
+        {
+          id: 8,
+          name: "یاماها WR450F",
+          brand: "یاماها",
+          type: "offroad",
+          cc: 450,
+          year: 2023,
+          price: 465000000,
+          old: null,
+          rating: 4.8,
+          sold: 41,
+          cool: "مایع",
+          tank: 6.2,
+          weight: 112,
+          colors: ["#274B6D", "#1D1E22"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/f23c6f1455f7.jpg",
+          desc: "موتورکراس حرفه‌ای با فریم آلومینیومی و وزن کم؛ برای کسانی که جدی و پرسرعت می‌روند.",
+        },
+        {
+          id: 9,
+          name: "سوزوکی DR-Z400S",
+          brand: "سوزوکی",
+          type: "offroad",
+          cc: 398,
+          year: 2022,
+          price: 362000000,
+          old: 385000000,
+          rating: 4.5,
+          sold: 58,
+          cool: "مایع",
+          tank: 10,
+          weight: 144,
+          colors: ["#E8E4DC", "#274B6D"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/619470524e42.jpg",
+          desc: "دوال افسانه‌ای سوزوکی با مکانیک ساده و تعمیر آسان؛ همه‌فن‌حریف جاده‌های خاکی ایران.",
+        },
+        {
+          id: 10,
+          name: "هوندا PCX160",
+          brand: "هوندا",
+          type: "scooter",
+          cc: 157,
+          year: 2024,
+          price: 186000000,
+          old: 199000000,
+          rating: 4.6,
+          sold: 340,
+          cool: "مایع",
+          tank: 8.1,
+          weight: 116,
+          colors: ["#C8102E", "#E8E4DC"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/2b9728f28b43.jpg",
+          desc: "اسکوتر شهری با صندلی جادار، باک بزرگ و مصرف سوخت پایین؛ همراه روزمره‌ی بی‌دردسر.",
+        },
+        {
+          id: 11,
+          name: "یاماها NMAX 155",
+          brand: "یاماها",
+          type: "scooter",
+          cc: 155,
+          year: 2024,
+          price: 172000000,
+          old: null,
+          rating: 4.5,
+          sold: 286,
+          cool: "مایع",
+          tank: 7.1,
+          weight: 127,
+          colors: ["#1D1E22", "#274B6D"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/feff785641ce.jpg",
+          desc: "پرفروش‌ترین اسکوتر ۱۵۵ با ترمز ABS، صفحه دیجیتال و کیفیت ساخت یاماها.",
+        },
+        {
+          id: 12,
+          name: "باجاج Boxer BM150",
+          brand: "باجاج",
+          type: "street",
+          cc: 150,
+          year: 2024,
+          price: 87500000,
+          old: 94000000,
+          rating: 4.2,
+          sold: 690,
+          cool: "هوا",
+          tank: 13,
+          weight: 129,
+          colors: ["#1D1E22", "#C8102E"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/a6f556af4c2c.jpg",
+          desc: "اقتصادی‌ترین انتخاب برای کار روزانه؛ مصرف حداقلی، قطعات ارزان و دوام اثبات‌شده.",
+        },
+        {
+          id: 13,
+          name: "کاوازاکی Z900",
+          brand: "کاوازاکی",
+          type: "street",
+          cc: 920,
+          year: 2023,
+          price: 735000000,
+          old: 780000000,
+          rating: 4.9,
+          sold: 45,
+          cool: "مایع",
+          tank: 17,
+          weight: 212,
+          colors: ["#C8102E", "#1D1E22"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/5dd674de28b7.jpg",
+          desc: "چهارسیلندر خشمگین با طراحی Sugomi؛ برای خیابان‌های باز و قلب‌های بی‌قرار.",
+        },
+        {
+          id: 14,
+          name: "سوزوکی Gixxer SF 250",
+          brand: "سوزوکی",
+          type: "street",
+          cc: 250,
+          year: 2024,
+          price: 198000000,
+          old: 215000000,
+          rating: 4.4,
+          sold: 154,
+          cool: "روغن",
+          tank: 12,
+          weight: 147,
+          colors: ["#274B6D", "#C8102E"],
+          img: "https://z-cdn.chatglm.cn/image-search-mcp/images-ppt/7384e94c7b90.png",
+          desc: "اسپرت فول‌فیئرینگ ۲۵۰ سی‌سی با موتور خنک‌روغن و مصرف اقتصادی؛ سبک و چابک.",
+        },
+      ];
+
+      const state = {
+        q: "",
+        cat: "all",
+        brand: "all",
+        sort: "smart",
+        expanded: false,
+      };
+      const BRANDS = [...new Set(PRODUCTS.map((p) => p.brand))];
+      const CATS = [
+        ["all", "همه موتورها"],
+        ["street", "خیابانی"],
+        ["cruiser", "کروز"],
+        ["offroad", "آفرود"],
+        ["scooter", "اسکوتر"],
+      ];
+      function getFiltered() {
+        let l = PRODUCTS.filter(
+          (p) =>
+            (state.cat === "all" || p.type === state.cat) &&
+            (state.brand === "all" || p.brand === state.brand) &&
+            (!state.q ||
+              (p.name + " " + p.brand + " " + TYPE_FA[p.type]).includes(
+                state.q,
+              )),
+        );
+        const s = state.sort;
+        if (s === "cheap") l.sort((a, b) => a.price - b.price);
+        else if (s === "exp") l.sort((a, b) => b.price - a.price);
+        else if (s === "off")
+          l.sort(
+            (a, b) =>
+              (b.old ? 1 - b.price / b.old : 0) -
+              (a.old ? 1 - a.price / a.old : 0),
+          );
+        else if (s === "sold") l.sort((a, b) => b.sold - a.sold);
+        else l.sort((a, b) => b.rating * b.sold - a.rating * a.sold);
+        return l;
+      }
+      let favs = new Set(JSON.parse(localStorage.getItem("ml_favs") || "[]"));
+      function cardHTML(p) {
+        const off = p.old ? Math.round((1 - p.price / p.old) * 100) : 0;
+        const badge = p.badge ? p.badge : p.old ? `٪${faD(off)} تخفیف` : "";
+        return `<article class="card" data-id="${p.id}">
+  ${badge ? `<span class="badge">${badge}</span>` : ""}
+  <button class="fav ${favs.has(p.id) ? "on" : ""}" data-fav="${p.id}" aria-label="علاقه‌مندی">${IC.heart}</button>
+  <div class="fig"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+  <div class="cbody">
+   <div class="cmeta"><span>${p.brand}</span><span class="dot"></span><span>${TYPE_FA[p.type]}</span></div>
+   <h3>${p.name}</h3>
+   <div class="cspecs">${fa(p.cc)} سی‌سی · مدل ${faD(p.year)} · خنک‌کاری ${p.cool}</div>
+   <div class="ccolors">${p.colors.map((c) => `<i style="background:${c}" title="${COLOR_FA[c] || ""}"></i>`).join("")}</div>
+   <div class="rate">${IC.star}${fa(p.rating)} <span>(${fa(p.sold)} فروش موفق)</span></div>
+   <div class="cbottom">
+    <div class="price">${fa(p.price)} <small>تومان</small>${p.old ? `<s>${fa(p.old)}</s>` : ""}</div>
+    <button class="add" data-add="${p.id}" aria-label="افزودن به سبد">${IC.cart}</button>
+   </div>
+  </div></article>`;
+      }
+      function renderGrid() {
+        const l = getFiltered();
+        $("#resN").textContent = faD(l.length) + " موتور";
+        if (!l.length) {
+          $("#grid").innerHTML =
+            `<div class="empty"><p>موتوری با این مشخصات پیدا نشد.</p><button id="clearF">حذف همه فیلترها</button></div>`;
+          $("#showToggle").style.display = "none";
+          $("#clearF").onclick = () => {
+            state.q = "";
+            state.cat = "all";
+            state.brand = "all";
+            state.expanded = false;
+            $("#search").value = "";
+            renderChips();
+            renderGrid();
+          };
+          return;
+        }
+        $("#grid").innerHTML = l.map((p) => cardHTML(p)).join("");
+        const toggle = $("#showToggle");
+        if (l.length > 6) {
+          toggle.style.display = "block";
+          const expanded = state.expanded;
+          $("#grid").classList.toggle("collapsed", !expanded);
+          toggle.classList.toggle("expanded", expanded);
+          $("#showMoreTxt").textContent = expanded
+            ? "نمایش کمتر"
+            : "نمایش بیشتر";
+        } else {
+          toggle.style.display = "none";
+          $("#grid").classList.remove("collapsed");
+        }
+      }
+      function renderChips() {
+        $("#catChips").innerHTML = CATS.map(([v, t]) => {
+          const n =
+            v === "all"
+              ? PRODUCTS.length
+              : PRODUCTS.filter((p) => p.type === v).length;
+          return `<button class="chip ${state.cat === v ? "on" : ""}" data-cat="${v}">${t}<b>${faD(n)}</b></button>`;
+        }).join("");
+        $("#brandChips").innerHTML =
+          `<button class="chip ${state.brand === "all" ? "on" : ""}" data-brand="all">همه برندها</button>` +
+          BRANDS.map(
+            (b) =>
+              `<button class="chip ${state.brand === b ? "on" : ""}" data-brand="${b}">${b}</button>`,
+          ).join("");
+      }
+      function setCat(c) {
+        state.cat = c;
+        state.expanded = false;
+        renderChips();
+        renderGrid();
+      }
+      $("#catChips").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-cat]");
+        if (b) setCat(b.dataset.cat);
+      });
+      $("#brandChips").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-brand]");
+        if (b) {
+          state.brand = b.dataset.brand;
+          state.expanded = false;
+          renderChips();
+          renderGrid();
+        }
+      });
+      $("#sortSel").addEventListener("change", (e) => {
+        state.sort = e.target.value;
+        renderGrid();
+      });
+      $("#showMoreBtn").addEventListener("click", () => {
+        state.expanded = !state.expanded;
+        renderGrid();
+        if (!state.expanded)
+          $("#products").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+
+      function toast(msg, bad = false) {
+        const t = document.createElement("div");
+        t.className = "toast" + (bad ? " bad" : "");
+        t.innerHTML = `<span class="ti">${bad ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>' : IC.check}</span>${msg}`;
+        $("#toasts").appendChild(t);
+        setTimeout(() => {
+          t.classList.add("out");
+          setTimeout(() => t.remove(), 260);
+        }, 2400);
+      }
+
+      let cart = JSON.parse(localStorage.getItem("ml_cart") || "[]");
+      const saveCart = () =>
+        localStorage.setItem("ml_cart", JSON.stringify(cart));
+      function addToCart(id, color) {
+        const p = PRODUCTS.find((x) => x.id === id);
+        color = color || p.colors[0];
+        const f = cart.find((i) => i.id === id && i.color === color);
+        if (f) f.qty++;
+        else cart.push({ id, color, qty: 1 });
+        saveCart();
+        renderCart();
+        bump();
+        toast(`«${p.name}» به سبد اضافه شد`);
+      }
+      function bump() {
+        const b = $("#cartBtn");
+        b.classList.remove("bump");
+        void b.offsetWidth;
+        b.classList.add("bump");
+      }
+      function renderCart() {
+        const n = cart.reduce((s, i) => s + i.qty, 0);
+        const bn = $("#cartN");
+        bn.textContent = faD(n);
+        bn.style.display = n ? "grid" : "none";
+        $("#drN").textContent = faD(n);
+        const wrap = $("#drItems");
+        if (!cart.length) {
+          wrap.innerHTML = `<div class="dr-empty"><div><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#B9B4AB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 10px"><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/><path d="M2.5 3.5h2.2l2.5 12h10.6l2-8H6.1"/></svg>سبد خریدت خالی است.<br>یک موتور انتخاب کن!</div></div>`;
+          $("#drFoot").style.display = "none";
+          return;
+        }
+        wrap.innerHTML = cart
+          .map((i, idx) => {
+            const p = PRODUCTS.find((x) => x.id === i.id);
+            return `<div class="ci">
+   <div class="fig"><img src="${p.img}" alt="${p.name}" /></div>
+   <div class="inf"><h4>${p.name}</h4>
+    <div class="cr"><i style="background:${i.color}"></i>${COLOR_FA[i.color] || "رنگ سفارشی"}</div>
+    <div class="qty">
+     <button data-q="1" data-i="${idx}" aria-label="افزایش"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+     <b>${faD(i.qty)}</b>
+     <button data-q="-1" data-i="${idx}" aria-label="کاهش"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14"/></svg></button>
+    </div></div>
+   <div class="side"><div class="pp">${fa(p.price * i.qty)}</div>
+    <button class="del" data-del="${idx}" aria-label="حذف"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9.5 7V4.5h5V7M6.5 7l1 13h9l1-13"/><path d="M10 11v6M14 11v6"/></svg></button>
+   </div></div>`;
+          })
+          .join("");
+        const sub = cart.reduce(
+          (s, i) => s + PRODUCTS.find((x) => x.id === i.id).price * i.qty,
+          0,
+        );
+        const disc = cart.reduce((s, i) => {
+          const p = PRODUCTS.find((x) => x.id === i.id);
+          return s + ((p.old || p.price) - p.price) * i.qty;
+        }, 0);
+        const ship = sub >= 500000000 ? 0 : 3500000;
+        $("#sSub").textContent = fa(sub);
+        $("#sDisc").textContent = disc ? fa(disc) + " تومان" : "—";
+        $("#sShip").innerHTML = ship
+          ? fa(ship) + " تومان"
+          : '<span class="fr">رایگان</span>';
+        $("#sTot").textContent = fa(sub + ship);
+        $("#drFoot").style.display = "block";
+      }
+      $("#drItems").addEventListener("click", (e) => {
+        const q = e.target.closest("[data-q]");
+        if (q) {
+          const i = +q.dataset.i;
+          cart[i].qty += +q.dataset.q;
+          if (cart[i].qty < 1) cart.splice(i, 1);
+          saveCart();
+          renderCart();
+          return;
+        }
+        const d = e.target.closest("[data-del]");
+        if (d) {
+          cart.splice(+d.dataset.del, 1);
+          saveCart();
+          renderCart();
+          toast("کالا از سبد حذف شد");
+        }
+      });
+
+      function openDrawer() {
+        $("#drawer").classList.add("on");
+        $("#ovl").classList.add("on");
+      }
+      function closeAll() {
+        $$(".modal").forEach((m) => m.classList.remove("on"));
+        $("#drawer").classList.remove("on");
+        $("#ovl").classList.remove("on");
+        $("#mmenu").classList.remove("on");
+      }
+      $("#cartBtn").onclick = openDrawer;
+      $("#drClose").onclick = closeAll;
+      $("#ovl").onclick = closeAll;
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeAll();
+      });
+      $$("[data-close]").forEach((b) => (b.onclick = closeAll));
+      $$(".modal").forEach((m) =>
+        m.addEventListener("click", (e) => {
+          if (e.target === m) m.classList.remove("on");
+        }),
+      );
+      $("#menuBtn").onclick = () => $("#mmenu").classList.toggle("on");
+      $("#mAmz").onclick = () => $("#mmenu").classList.remove("on");
+      $("#mAuth").onclick = () => {
+        openAuth("auth");
+        $("#mmenu").classList.remove("on");
+      };
+      $$(".nav a[data-cat], .mmenu a[data-cat]").forEach((a) =>
+        a.addEventListener("click", () => {
+          setCat(a.dataset.cat);
+          $("#mmenu").classList.remove("on");
+          $("#products").scrollIntoView({ behavior: "smooth" });
+        }),
+      );
+
+      function buildMega() {
+        $("#megaBrands").innerHTML = BRANDS.map((b, i) => {
+          const n = PRODUCTS.filter((p) => p.brand === b).length;
+          return `<div class="mega-brand ${i === 0 ? "on" : ""}" data-mbrand="${b}">${b}<span class="cnt">${faD(n)} مدل</span></div>`;
+        }).join("");
+        renderMegaModels(BRANDS[0]);
+        $("#megaBrands").addEventListener("mouseover", (e) => {
+          const bd = e.target.closest("[data-mbrand]");
+          if (!bd) return;
+          $$("#megaBrands .mega-brand").forEach((x) =>
+            x.classList.toggle("on", x === bd),
+          );
+          renderMegaModels(bd.dataset.mbrand);
+        });
+        $("#megaPanel").addEventListener("click", (e) => {
+          const bd = e.target.closest("[data-mbrand]");
+          if (bd) {
+            state.brand = bd.dataset.mbrand;
+            state.expanded = false;
+            renderChips();
+            renderGrid();
+            $("#products").scrollIntoView({ behavior: "smooth" });
+            return;
+          }
+          const prod = e.target.closest("[data-mprod]");
+          if (prod) openProduct(+prod.dataset.mprod);
+        });
+      }
+      function renderMegaModels(brand) {
+        const items = PRODUCTS.filter((p) => p.brand === brand);
+        $("#megaModels").innerHTML =
+          `<h6>موتورهای ${brand}</h6>` +
+          items
+            .map(
+              (p) => `<a class="mega-item" data-mprod="${p.id}">
+            <div class="mi-fig"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+            <div class="mi-tx"><b>${p.name}</b><span>${fa(p.price)} تومان</span></div>
+          </a>`,
+            )
+            .join("");
+      }
+
+      $("#search").addEventListener("input", (e) => {
+        state.q = e.target.value.trim();
+        state.expanded = false;
+        renderGrid();
+      });
+      $("#searchForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        $("#products").scrollIntoView({ behavior: "smooth" });
+      });
+
+      const AMZ = PRODUCTS.filter((p) => p.old)
+        .sort((a, b) => 1 - a.price / a.old - (1 - b.price / b.old))
+        .reverse()
+        .slice(0, 6);
+      $("#amzStrip").innerHTML = AMZ.map((p) => {
+        const off = Math.round((1 - p.price / p.old) * 100);
+        return `<div class="acard" data-amz="${p.id}">
+  <span class="off">٪${faD(off)}</span>
+  <div class="fig"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+  <h4>${p.name}</h4>
+  <div class="pr">${fa(p.price)} <small>تومان</small></div>
+  <s>${fa(p.old)}</s></div>`;
+      }).join("");
+      $("#amzStrip").addEventListener("click", (e) => {
+        const c = e.target.closest("[data-amz]");
+        if (c) openProduct(+c.dataset.amz);
+      });
+      let dealEnd = Date.now() + 8 * 3600 * 1000;
+      setInterval(() => {
+        let r = Math.max(0, dealEnd - Date.now());
+        const h = Math.floor(r / 3600000),
+          m = Math.floor(r / 60000) % 60,
+          s = Math.floor(r / 1000) % 60;
+        $("#tH").textContent = faD(String(h).padStart(2, "0"));
+        $("#tM").textContent = faD(String(m).padStart(2, "0"));
+        $("#tS").textContent = faD(String(s).padStart(2, "0"));
+      }, 1000);
+
+      let selColor = null;
+      function openProduct(id) {
+        const p = PRODUCTS.find((x) => x.id === id);
+        selColor = p.colors[0];
+        const off = p.old ? Math.round((1 - p.price / p.old) * 100) : 0;
+        $("#pBody").innerHTML = `
+  <button class="mx" data-close>${IC.x}</button>
+  <div class="pd">
+   <div class="pd-fig">
+     <div class="figwrap"><img src="${p.img}" alt="${p.name}" /></div>
+     <div class="pd-sw" id="pdSw">${p.colors.map((c, i) => `<button class="sw ${i === 0 ? "on" : ""}" style="background:${c}" data-pc="${c}" aria-label="${COLOR_FA[c] || ""}"></button>`).join("")}</div>
+   </div>
+   <div class="pd-info">
+    <span class="pd-brand">${p.brand} · ${TYPE_FA[p.type]}</span>
+    <h2>${p.name}</h2>
+    <div class="pd-rate">${IC.star} ${fa(p.rating)} <span>(${fa(p.sold)} فروش موفق)</span></div>
+    <p class="pd-desc">${p.desc}</p>
+    <div class="spec">
+     <div><span>پیشرانه</span><b>${fa(p.cc)} سی‌سی</b></div>
+     <div><span>سال مدل</span><b>${faD(p.year)}</b></div>
+     <div><span>خنک‌کاری</span><b>${p.cool}</b></div>
+     <div><span>ظرفیت باک</span><b>${fa(p.tank)} لیتر</b></div>
+     <div><span>وزن</span><b>${fa(p.weight)} کیلوگرم</b></div>
+     <div><span>گارانتی</span><b>۲ سال موتورلند</b></div>
+    </div>
+    <div class="pd-price">
+     <span class="v">${fa(p.price)} <small>تومان</small></span>
+     ${p.old ? `<s>${fa(p.old)}</s><span class="off">٪${faD(off)}</span>` : ""}
+    </div>
+    <div class="pd-actions">
+     <button class="btn w" id="pdAdd">${IC.cart} افزودن به سبد خرید</button>
+    </div>
+   </div></div>`;
+        $("#pModal").classList.add("on");
+        $("#pBody [data-close]").onclick = closeAll;
+        $("#pdSw").addEventListener("click", (e) => {
+          const b = e.target.closest("[data-pc]");
+          if (!b) return;
+          selColor = b.dataset.pc;
+          $$("#pdSw .sw").forEach((s) => s.classList.toggle("on", s === b));
+        });
+        $("#pdAdd").onclick = () => {
+          addToCart(p.id, selColor);
+          closeAll();
+          openDrawer();
+        };
+      }
+
+      $("#grid").addEventListener("click", (e) => {
+        const add = e.target.closest("[data-add]");
+        if (add) {
+          addToCart(+add.dataset.add);
+          return;
+        }
+        const fv = e.target.closest("[data-fav]");
+        if (fv) {
+          const id = +fv.dataset.fav;
+          if (favs.has(id)) {
+            favs.delete(id);
+            fv.classList.remove("on");
+            toast("از علاقه‌مندی‌ها حذف شد");
+          } else {
+            favs.add(id);
+            fv.classList.add("on");
+            toast("به علاقه‌مندی‌ها اضافه شد");
+          }
+          localStorage.setItem("ml_favs", JSON.stringify([...favs]));
+          return;
+        }
+        const card = e.target.closest(".card");
+        if (card) openProduct(+card.dataset.id);
+      });
+
+      let pendingFlow = "auth",
+        smsCode = "",
+        user = null,
+        authMode = "login";
+      function openAuth(flow) {
+        pendingFlow = flow;
+        $("#aStep1").style.display = "block";
+        $("#aStep2").style.display = "none";
+        $("#phone").value = "";
+        $("#phErr").classList.remove("on");
+        $$("#codeBox input").forEach((i) => (i.value = ""));
+        $("#aModal").classList.add("on");
+      }
+      $("#authTabs").addEventListener("click", (e) => {
+        const b = e.target.closest("[data-tab]");
+        if (!b) return;
+        authMode = b.dataset.tab;
+        $$("#authTabs button").forEach((x) =>
+          x.classList.toggle("on", x === b),
+        );
+        $("#authTitle").textContent =
+          authMode === "login" ? "ورود به موتورلند" : "ثبت‌نام در موتورلند";
+        $("#authSub").textContent =
+          authMode === "login"
+            ? "شماره موبایل خود را وارد کنید تا کد تأیید برایتان پیامک شود."
+            : "شماره موبایل خود را وارد کنید تا حساب کاربری شما ساخته شود.";
+      });
+      $("#authBtn").onclick = () =>
+        user ? toast(`خوش می‌آیی، ${user}!`) : openAuth("auth");
+      $("#authGo").onclick = () => {
+        const raw = enD($("#phone").value).replace(/[\s-]/g, "");
+        let normalized = raw;
+        if (normalized.startsWith("98") && normalized.length === 12)
+          normalized = "0" + normalized.slice(2);
+        else if (normalized.startsWith("9") && normalized.length === 10)
+          normalized = "0" + normalized;
+        if (!/^09\d{9}$/.test(normalized)) {
+          $("#phErr").classList.add("on");
+          return;
+        }
+        $("#phErr").classList.remove("on");
+        smsCode = String(Math.floor(1000 + Math.random() * 9000));
+        $("#codeHint").textContent = `کد نمونه (حالت نمایشی): ${faD(smsCode)}`;
+        $$("#codeBox input").forEach((i) => (i.value = ""));
+        $("#codeErr").classList.remove("on");
+        $("#aStep1").style.display = "none";
+        $("#aStep2").style.display = "block";
+        $$("#codeBox input")[0].focus();
+      };
+      $("#aBack").onclick = () => {
+        $("#aStep2").style.display = "none";
+        $("#aStep1").style.display = "block";
+      };
+      $("#resendBtn").onclick = () => {
+        smsCode = String(Math.floor(1000 + Math.random() * 9000));
+        $("#codeHint").textContent = `کد نمونه (حالت نمایشی): ${faD(smsCode)}`;
+        toast("کد جدید ارسال شد");
+      };
+      $("#codeBox").addEventListener("input", (e) => {
+        const t = e.target;
+        if (t.value && !/^\d$/.test(enD(t.value))) {
+          t.value = "";
+          return;
+        }
+        t.value = faD(t.value);
+        if (
+          t.value &&
+          t.nextElementSibling &&
+          t.nextElementSibling.tagName === "INPUT"
+        )
+          t.nextElementSibling.focus();
+      });
+      $("#codeBox").addEventListener("keydown", (e) => {
+        if (
+          e.key === "Backspace" &&
+          !e.target.value &&
+          e.target.previousElementSibling
+        )
+          e.target.previousElementSibling.focus();
+      });
+      function getCode() {
+        return $$("#codeBox input")
+          .map((i) => enD(i.value))
+          .join("");
+      }
+      $("#codeGo").onclick = () => {
+        if (getCode() !== smsCode) {
+          $("#codeErr").classList.add("on");
+          return;
+        }
+        $("#codeErr").classList.remove("on");
+        user = "موتورسوار";
+        $("#authTxt").textContent = "سلام، موتورسوار!";
+        $("#aModal").classList.remove("on");
+        if (pendingFlow === "checkout") {
+          openCheckout();
+        } else toast("ورود با موفقیت انجام شد");
+      };
+      $("#checkout").onclick = () => {
+        if (!cart.length) {
+          toast("سبد خرید خالی است", true);
+          return;
+        }
+        if (user) openCheckout();
+        else openAuth("checkout");
+      };
+
+      /* ================= چک‌اوت چندمرحله‌ای ================= */
+      const PROVINCES = [
+        "تهران",
+        "اصفهان",
+        "فارس",
+        "خراسان رضوی",
+        "آذربایجان شرقی",
+        "گیلان",
+        "مازندران",
+        "البرز",
+        "خوزستان",
+        "کرمان",
+        "همدان",
+        "کرمانشاه",
+        "قزوین",
+        "زنجان",
+        "اردبیل",
+        "سایر",
+      ];
+      let coStep = 1;
+      let coData = {
+        name: "",
+        phone: "",
+        province: "",
+        city: "",
+        address: "",
+        postal: "",
+        payMethod: "card",
+        cardNum: "",
+        cardName: "",
+        cardExp: "",
+        cardCvv: "",
+      };
+
+      function openCheckout() {
+        coStep = 1;
+        coData = {
+          name: "",
+          phone: "",
+          province: "",
+          city: "",
+          address: "",
+          postal: "",
+          payMethod: "card",
+          cardNum: "",
+          cardName: "",
+          cardExp: "",
+          cardCvv: "",
+        };
+        renderCheckout();
+        closeAll();
+        $("#sModal").classList.add("on");
+      }
+      function getCartTotals() {
+        const sub = cart.reduce(
+          (s, i) => s + PRODUCTS.find((x) => x.id === i.id).price * i.qty,
+          0,
+        );
+        const disc = cart.reduce((s, i) => {
+          const p = PRODUCTS.find((x) => x.id === i.id);
+          return s + ((p.old || p.price) - p.price) * i.qty;
+        }, 0);
+        const ship = sub >= 500000000 ? 0 : 3500000;
+        return { sub, disc, ship, tot: sub + ship };
+      }
+      function renderSteps() {
+        const labels = ["سبد", "آدرس", "پرداخت", "تأیید"];
+        return `<div class="co-steps">
+          ${[1, 2, 3, 4]
+            .map(
+              (n, i) => `
+            <div class="co-step ${n === coStep ? "on" : n < coStep ? "done" : ""}">
+              <div class="circ">${n < coStep ? '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg>' : n}</div>
+              <div class="lbl">${labels[i]}</div>
+            </div>${i < 3 ? `<div class="co-line ${n < coStep ? "done" : ""}"></div>` : ""}
+          `,
+            )
+            .join("")}
+        </div>`;
+      }
+      function renderSummary() {
+        const t = getCartTotals();
+        return `<div class="co-summary">
+          ${cart
+            .map((i) => {
+              const p = PRODUCTS.find((x) => x.id === i.id);
+              return `<div class="si"><img src="${p.img}" alt="${p.name}" /><div><b>${p.name}</b><div class="qp">${faD(i.qty)} عدد</div></div><div class="pp">${fa(p.price * i.qty)}</div></div>`;
+            })
+            .join("")}
+          <div class="total"><span>مبلغ قابل پرداخت</span><span class="v">${fa(t.tot)} تومان</span></div>
+        </div>`;
+      }
+      function renderCheckout() {
+        let html = renderSteps();
+        if (coStep === 1) {
+          html += `<div class="co-h">بررسی سفارش</div><div class="co-sub">قبل از ادامه، موارد سبد را بررسی کنید.</div>`;
+          html += renderSummary();
+          html += `<div class="co-actions"><button class="btn ghost" data-close>انصراف</button><button class="btn" id="coNext">ادامه → آدرس</button></div>`;
+        } else if (coStep === 2) {
+          html += `<div class="co-h">اطلاعات تحویل</div><div class="co-sub">لطفاً اطلاعات دقیق و قابل اتکا وارد کنید.</div>`;
+          html += `<div class="co-grid-2"><div class="co-field"><label>نام و نام خانوادگی</label><input id="fName" value="${coData.name}" placeholder="مثلاً علی رضایی" /></div><div class="co-field"><label>شماره تماس</label><input id="fPhone" inputmode="tel" value="${coData.phone}" placeholder="۰۹۱۲۰۰۰۰۰۰۰" maxlength="11" /></div></div>`;
+          html += `<div class="co-grid-2"><div class="co-field"><label>استان</label><select id="fProv">${PROVINCES.map((p) => `<option ${p === coData.province ? "selected" : ""}>${p}</option>`).join("")}</select></div><div class="co-field"><label>شهر</label><input id="fCity" value="${coData.city}" placeholder="مثلاً تهران" /></div></div>`;
+          html += `<div class="co-field"><label>نشانی کامل</label><textarea id="fAddr" placeholder="خیابان، کوچه، پلاک و واحد">${coData.address}</textarea></div>`;
+          html += `<div class="co-field"><label>کد پستی (اختیاری)</label><input id="fPostal" inputmode="numeric" value="${coData.postal}" placeholder="۱۰位" maxlength="10" /></div>`;
+          html += renderSummary();
+          html += `<div class="co-actions"><button class="btn ghost" id="coBack">→ بازگشت</button><button class="btn" id="coNext">ادامه → پرداخت</button></div>`;
+        } else if (coStep === 3) {
+          html += `<div class="co-h">روش پرداخت</div><div class="co-sub">درگاه شبیه‌سازی شده — اطلاعات کارت واقعی وارد نکنید.</div>`;
+          html += `<div class="pay-method"><label class="${coData.payMethod === "card" ? "on" : ""}"><input type="radio" name="pm" value="card" ${coData.payMethod === "card" ? "checked" : ""} /><span>💳 کارت بانکی</span></label><label class="${coData.payMethod === "cod" ? "on" : ""}"><input type="radio" name="pm" value="cod" ${coData.payMethod === "cod" ? "checked" : ""} /><span>🚚 پرداخت در محل</span></label></div>`;
+          if (coData.payMethod === "card") {
+            html += `<div class="card-visual"><div class="cv-chip"></div><div class="cv-num" id="cvNum">${coData.cardNum || "•••• •••• •••• ••••"}</div><div class="cv-row"><span>دارنده کارت</span><b id="cvName">${coData.cardName || "نام دارنده"}</b></div><div class="cv-row"><span>انقضا</span><b id="cvExp">${coData.cardExp || "MM/YY"}</b></div><div class="cv-brand">motorPay</div></div>`;
+            html += `<div class="co-field"><label>شماره کارت</label><input id="fCardNum" inputmode="numeric" value="${coData.cardNum}" placeholder="۶۰۳۷-xxxx-xxxx-xxxx" maxlength="19" style="letter-spacing:1px;font-family:monospace" /></div>`;
+            html += `<div class="co-field"><label>نام دارنده کارت</label><input id="fCardName" value="${coData.cardName}" placeholder="ALI REZAEI" style="text-transform:uppercase" /></div>`;
+            html += `<div class="co-grid-2"><div class="co-field"><label>تاریخ انقضا</label><input id="fCardExp" value="${coData.cardExp}" placeholder="MM/YY" maxlength="5" /></div><div class="co-field"><label>CVV2</label><input id="fCardCvv" inputmode="numeric" value="${coData.cardCvv}" placeholder="۱۲۳" maxlength="4" style="text-align:center" /></div></div>`;
+          } else {
+            html += `<div class="co-summary"><div class="si" style="justify-content:center;text-align:center;padding:14px 0">💰 مبلغ ${fa(getCartTotals().tot)} تومان هنگام تحویل دریافت می‌شود.</div></div>`;
+          }
+          html += renderSummary();
+          html += `<div class="co-actions"><button class="btn ghost" id="coBack">→ بازگشت</button><button class="btn" id="coPay">پرداخت و ثبت سفارش</button></div>`;
+        } else if (coStep === 4) {
+          const t = getCartTotals();
+          const ordCode = "ML-" + Math.floor(100000 + Math.random() * 900000);
+          html += `<div class="co-success"><div class="ok-ic"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg></div><h3>سفارش ثبت شد!</h3><p>کارشناسان موتورلند تا حداکثر ۲ ساعت آینده برای هماهنگی باربری تماس می‌گیرند.</p>`;
+          html += `<div class="order-info">
+            <div class="ri"><span>کد رهگیری</span><b>${ordCode}</b></div>
+            <div class="ri"><span>گیرنده</span><b>${coData.name}</b></div>
+            <div class="ri"><span>شماره تماس</span><b>${coData.phone}</b></div>
+            <div class="ri"><span>استان/شهر</span><b>${coData.province} / ${coData.city}</b></div>
+            <div class="ri"><span>روش پرداخت</span><b>${coData.payMethod === "card" ? "کارت بانکی" : "پرداخت در محل"}</b></div>
+            <div class="ri"><span>مبلغ کل</span><b>${fa(t.tot)} تومان</b></div>
+            <div class="ri"><span>هزینه باربری</span><b>${t.ship ? fa(t.ship) + " تومان" : "رایگان"}</b></div>
+          </div>`;
+          html += `<button class="btn full" data-close>باشه، ممنون</button></div>`;
+          cart = [];
+          saveCart();
+          renderCart();
+        }
+        $("#coContent").innerHTML = html;
+        bindCheckoutEvents();
+      }
+      function bindCheckoutEvents() {
+        if ($("#coNext"))
+          $("#coNext").onclick = () => {
+            if (coStep === 2) {
+              coData.name = $("#fName").value.trim();
+              coData.phone = enD($("#fPhone").value);
+              coData.province = $("#fProv").value;
+              coData.city = $("#fCity").value.trim();
+              coData.address = $("#fAddr").value.trim();
+              coData.postal = $("#fPostal").value;
+              if (!coData.name || coData.name.length < 3) {
+                toast("نام کامل را وارد کنید", true);
+                return;
+              }
+              if (!/^09\d{9}$/.test(coData.phone)) {
+                toast("شماره موبایل معتبر وارد کنید", true);
+                return;
+              }
+              if (!coData.province || !coData.city) {
+                toast("استان و شهر را وارد کنید", true);
+                return;
+              }
+              if (!coData.address || coData.address.length < 10) {
+                toast("نشانی کامل را وارد کنید", true);
+                return;
+              }
+            }
+            coStep++;
+            renderCheckout();
+          };
+        if ($("#coBack"))
+          $("#coBack").onclick = () => {
+            coStep--;
+            renderCheckout();
+          };
+        if ($("#coPay"))
+          $("#coPay").onclick = () => {
+            if (coData.payMethod === "card") {
+              coData.cardNum = $("#fCardNum") ? $("#fCardNum").value : "";
+              coData.cardName = $("#fCardName") ? $("#fCardName").value : "";
+              coData.cardExp = $("#fCardExp") ? $("#fCardExp").value : "";
+              coData.cardCvv = $("#fCardCvv") ? $("#fCardCvv").value : "";
+              const cn = enD(coData.cardNum).replace(/\D/g, "");
+              if (cn.length !== 16) {
+                toast("شماره کارت باید ۱۶ رقم باشد", true);
+                return;
+              }
+              if (!coData.cardName) {
+                toast("نام دارنده کارت را وارد کنید", true);
+                return;
+              }
+              if (!/^\d{2}\/\d{2}$/.test(enD(coData.cardExp))) {
+                toast("تاریخ انقضا به شکل MM/YY", true);
+                return;
+              }
+              if (enD(coData.cardCvv).length < 3) {
+                toast("CVV2 معتبر وارد کنید", true);
+                return;
+              }
+            }
+            coStep++;
+            renderCheckout();
+            toast("در حال انتقال به درگاه پرداخت... ⏳");
+            setTimeout(() => toast("پرداخت با موفقیت انجام شد ✅"), 1500);
+          };
+        $$('input[name="pm"]').forEach(
+          (r) =>
+            (r.onchange = () => {
+              coData.payMethod = r.value;
+              renderCheckout();
+            }),
+        );
+        const cardNum = $("#fCardNum");
+        if (cardNum)
+          cardNum.oninput = (e) => {
+            let v = enD(e.target.value).replace(/\D/g, "").slice(0, 16);
+            v = v.replace(/(.{4})/g, "$1 ").trim();
+            e.target.value = faD(v);
+            $("#cvNum").textContent = v ? faD(v) : "•••• •••• •••• ••••";
+            coData.cardNum = v;
+          };
+        const cardName = $("#fCardName");
+        if (cardName)
+          cardName.oninput = (e) => {
+            $("#cvName").textContent = e.target.value || "نام دارنده";
+            coData.cardName = e.target.value;
+          };
+        const cardExp = $("#fCardExp");
+        if (cardExp)
+          cardExp.oninput = (e) => {
+            let v = enD(e.target.value).replace(/\D/g, "").slice(0, 4);
+            if (v.length >= 3) v = v.slice(0, 2) + "/" + v.slice(2);
+            e.target.value = faD(v);
+            $("#cvExp").textContent = v ? faD(v) : "MM/YY";
+            coData.cardExp = v;
+          };
+      }
+
+      const INFO = {
+        about: [
+          "درباره موتورلند",
+          "موتورلند از سال ۱۳۹۲ فعالیت خود را با هدف ارائه موتورسیکلت‌های اورجینال و گارانتی‌دار آغاز کرد. امروز با سه شعبه فیزیکی، تیم ۴۰ نفره خدمات پس از فروش و انبار اختصاصی قطعات، همراه همیشکی راکب‌های ایرانی است.",
+        ],
+        contact: [
+          "تماس با ما",
+          "تلفن پشتیبانی: ۰۲۱-۹۱۰۰۸۸۰۰<br>واتساپ: ۰۹۱۲-۰۰۰-۸۸۰۰<br>نشانی: تهران، بزرگراه فتح، شهرک صناعی، پلاک ۱۲<br>پاسخگویی: همه‌روزه ۹ تا ۲۱",
+        ],
+        terms: [
+          "قوانین و مقررات",
+          "۱- قیمت‌ها بر اساس نرخ روز به‌روزرسانی می‌شود.<br>۲- ثبت سفارش به معنای قطعی‌شدن رزرو است.<br>۳- مدارک نقل‌وانقال پس از تأیید هویت انجام می‌شود.<br>۴- لوازم جانبی دارای ۷ روز مهلت بازگشت هستند.",
+        ],
+        ship: [
+          "شیوه ارسال و باربری",
+          "موتورها با باربری ویژه و بسته‌بندی چوبی استاندارد به سراسر کشور ارسال می‌شوند. برای خرید بالای ۵۰۰ میلیون تومان باربری رایگان است. تحویل در تهران ۲۴ ساعته و در شهرستان‌ها ۳ تا ۷ روز کاری است.",
+        ],
+        ret: [
+          "رویه بازگشت کالا",
+          "تا ۷ روز پس از تحویل، در صورت سالم‌بودن و پلمپ بودن کالا، امکان بازگشت بدون قید و شرط وجود دارد. هزینه بازگشت در صورت ایراد از سمت موتورلند، بر عهده ماست.",
+        ],
+      };
+      $$("[data-info]").forEach(
+        (a) =>
+          (a.onclick = () => {
+            const [t, b] = INFO[a.dataset.info];
+            $("#ibT").textContent = t;
+            $("#ibB").innerHTML = b;
+            $("#iModal").classList.add("on");
+          }),
+      );
+      $$("[data-cat-link]").forEach(
+        (a) =>
+          (a.onclick = () => {
+            setCat(a.dataset.catLink);
+            $("#products").scrollIntoView({ behavior: "smooth" });
+          }),
+      );
+      $("#newsForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const v = $("#newsIn").value.trim();
+        if (!/^\S+@\S+\.\S+$/.test(v)) {
+          toast("ایمیل معتبر وارد کنید", true);
+          return;
+        }
+        $("#newsIn").value = "";
+        toast("عضویت شما در خبرنامه ثبت شد");
+      });
+
+      const heroP = PRODUCTS.find((p) => p.id === 1);
+      $("#heroName").textContent = heroP.name;
+      $("#heroPrice").innerHTML =
+        `${fa(heroP.price)} <small style="font-size:11px;color:var(--mut);font-weight:500;">تومان</small>`;
+      $("#heroAdd").onclick = () => addToCart(heroP.id, heroP.colors[0]);
+
+      buildMega();
+      renderChips();
+      renderGrid();
+      renderCart();
+    </script>
+  </body>
+</html>
